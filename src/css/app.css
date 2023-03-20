@@ -41,9 +41,36 @@
 
   /* -----utils---- */
   --icon-size: 1.25rem;
+  --decoration-line-height: 5.625rem;
 }
 
-/* ------------------ */
+/* ---------UTILS--------- */
+.btn-empty {
+  border: 1px solid var(--clr-accent);
+  border-radius: var(--btn-border-radius);
+  color: var(--clr-accent);
+}
+.btn-empty:hover {
+  background-color: var(--clr-accent);
+  color: var(--clr-light) !important;
+}
+
+.btn-full {
+  color: var(--clr-light);
+  border: 1px solid var(--clr-accent);
+  border-radius: var(--btn-border-radius);
+  background-color: var(--clr-accent);
+}
+.btn-full:hover {
+  background-color: transparent;
+  color: var(--clr-accent) !important;
+}
+
+.btn-big {
+  padding: 16px 28px;
+}
+
+/* ____________________________ */
 .fw-h-main {
   font-weight: var(--fw-heading-main);
 }
@@ -66,7 +93,7 @@
 /* ------------------ */
 
 .clr-accent {
-  color: var(--clr-accent);
+  color: var(--clr-accent) !important;
 }
 .clr-neutral {
   color: var(--clr-neutral);
@@ -107,8 +134,14 @@ p {
 }
 
 a {
-  text-decoration: none !important;
-  color: inherit !important;
+  text-decoration: none;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
 }
 
 *,
@@ -144,16 +177,6 @@ button {
 
 button {
   display: block;
-}
-.btn {
-  transition: all 0.3s cubic-bezier(0.25, 0.75, 0.5, 1.25);
-}
-
-.btn:hover {
-  background-color: transparent;
-  color: var(--clr-primary);
-  outline-color: var(--clr-primary);
-  text-shadow: 1px 1px 5px black;
 }
 
 .min-height-100vh {
@@ -193,13 +216,16 @@ button {
   }
 }
 
-.icon {
-  font-size: var(--icon-size);
-  aspect-ratio: 1;
+.up-transition {
   transition: 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.icon:hover {
+.icon {
+  font-size: var(--icon-size);
+  aspect-ratio: 1;
+}
+
+.up-transition:hover {
   transform: translateY(-3px);
   color: var(--clr-accent);
 }
@@ -209,7 +235,41 @@ button {
   right: calc(var(--main-padding) / 2);
   bottom: 0;
   transform: translateX(50%);
+  height: 295px;
 }
+
+.email-container {
+  left: calc(var(--main-padding) / 2);
+  transform: translateX(-50%);
+  bottom: 0;
+  position: absolute;
+  height: 295px;
+}
+
 .socials-container a {
   height: var(--icon-size);
+}
+
+.line {
+  height: var(--decoration-line-height);
+  position: relative;
+}
+
+.line::after {
+  background: var(--clr-neutral);
+  position: absolute;
+  content: "";
+  width: 1px;
+  top: 0;
+  right: 50%;
+  transform: translateX(-50%);
+
+  height: 100%;
+}
+
+/* ___________________________ */
+
+.email-link {
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
 }
