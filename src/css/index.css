@@ -1,0 +1,7 @@
+.hero-section {
+  max-width: 53.125rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

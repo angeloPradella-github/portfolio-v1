@@ -1,9 +1,19 @@
-import { useState } from "react";
-// import viteLogo from '/vite.svg'
+// ----------CSS-------------
 import "./css/app.css";
+import "./css/index.css";
+// ----------PAGES-------------
+import Index from "./pages/Index";
+// ----------COMPONENTS-------------
+import Socials from "./components/Socials";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <main className="app-layout">
+      <Socials />
+
+      <Index />
+    </main>
+  );
 }
 
 export default App;
