@@ -110,6 +110,7 @@ body {
   min-height: 100vh;
   font-family: var(--ff-normal);
   background-color: var(--clr-light);
+  transition: 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 h1,
