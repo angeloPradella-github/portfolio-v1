@@ -8,7 +8,7 @@ export default function SwitchContainer() {
     if (!isDarkMode) {
       document.documentElement.style.setProperty("--clr-neutral", "#cdcdcd");
       document.documentElement.style.setProperty("--clr-light", "#292929");
-      document.documentElement.style.setProperty("--clr-dark", "#fffbfb");
+      document.documentElement.style.setProperty("--clr-dark", "#e6e6e6");
     } else {
       document.documentElement.style.setProperty("--clr-neutral", "#444452");
       document.documentElement.style.setProperty("--clr-light", "#fffbfb");

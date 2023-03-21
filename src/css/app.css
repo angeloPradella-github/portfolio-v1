@@ -32,6 +32,8 @@
   --fs-h3: 1.3rem;
   --fs-h2: 2.5rem;
   --fs-h1: clamp(3rem, 5vw + 1rem, 5rem);
+
+  --fs-nav: 0.8rem;
   /* --------- MAIN MARGIN ----------*/
   --main-margin: clamp(1rem, 3vw, 16rem);
   /* --------- BUTTON PROPERTIES ----------*/
@@ -70,6 +72,10 @@
   padding: 16px 28px;
 }
 
+.btn {
+  padding: 10px 15px;
+}
+
 /* ____________________________ */
 .fw-h-main {
   font-weight: var(--fw-heading-main);
@@ -89,6 +95,10 @@
 }
 .fw-b-thin {
   font-weight: var(--fw-body-thin);
+}
+/* ------------------ */
+.fs-nav {
+  font-size: var(--fs-nav);
 }
 /* ------------------ */
 
@@ -201,7 +211,7 @@ button {
 ::-webkit-scrollbar-thumb {
   border-radius: 100vw;
   background-color: #888888ac;
-  border: 4px white solid;
+  border: 4px var(--clr-light) solid;
 }
 
 /* ______________________________________________________ */
@@ -234,7 +244,7 @@ button {
 }
 
 .socials-container {
-  position: absolute;
+  position: fixed;
   right: calc(var(--main-padding) / 2);
   bottom: 0;
   transform: translateX(50%);
@@ -245,7 +255,7 @@ button {
   left: calc(var(--main-padding) / 2);
   transform: translateX(-50%);
   bottom: 0;
-  position: absolute;
+  position: fixed;
   height: 295px;
 }
 
@@ -275,4 +285,46 @@ button {
 .email-link {
   writing-mode: vertical-rl;
   text-orientation: sideways;
+}
+/* _____________NAVBAR______________ */
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  display: block;
+  transition: all 0.3s ease;
+  bottom: 0;
+}
+.nav-item:hover::after {
+  width: 100%;
+  height: 1px;
+  background-color: var(--clr-accent);
+}
+
+.animate-navbar-up {
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: translateY(-110%);
+}
+
+.animate-navbar-down {
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: translateY(0);
+}
+
+.bg-nav {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.9px);
+  -webkit-backdrop-filter: blur(5.9px);
+  outline: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.bg-transparent {
+  background: rgba(255, 255, 255, 0);
 }
