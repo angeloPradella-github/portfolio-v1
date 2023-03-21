@@ -11,7 +11,7 @@
   --clr-accent: #007bff;
 
   --clr-neutral: #444452;
-  --clr-light: #f5f5f7;
+  --clr-light: #fffbfb;
   --clr-dark: #111;
 
   --clr-primary-hover: #d6d6d6;
@@ -109,6 +109,7 @@
 body {
   min-height: 100vh;
   font-family: var(--ff-normal);
+  background-color: var(--clr-light);
 }
 
 h1,
@@ -223,6 +224,7 @@ button {
 .icon {
   font-size: var(--icon-size);
   aspect-ratio: 1;
+  text-shadow: 2px 1px 3px rgb(0, 0, 0, 0.2);
 }
 
 .up-transition:hover {
@@ -238,7 +240,7 @@ button {
   height: 295px;
 }
 
-.email-container {
+.switch-container {
   left: calc(var(--main-padding) / 2);
   transform: translateX(-50%);
   bottom: 0;

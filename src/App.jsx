@@ -5,12 +5,12 @@ import "./css/index.css";
 import Index from "./pages/Index";
 // ----------COMPONENTS-------------
 import Socials from "./components/Socials";
-import EmailLink from "./components/EmailLink";
+import SwitchContainer from "./components/SwitchContainer";
 
 function App() {
   return (
     <main className="app-layout">
-      {/* <EmailLink /> */}
+      <SwitchContainer />
       <Socials />
 
       <Index />
