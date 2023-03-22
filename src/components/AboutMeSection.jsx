@@ -42,7 +42,7 @@ export default function AboutMeSection() {
         <section className="mt-6 w-full px-7">
           <div className="flex justify-between extra-info-wrapper px-4 py-2">
             <div>
-              <h4>Location</h4>{" "}
+              <h4>Sede</h4>{" "}
               <p className="text-base clr-neutral fw-b-bold">Trieste, Italia</p>
             </div>
 
@@ -50,15 +50,24 @@ export default function AboutMeSection() {
               <h4>Email</h4>{" "}
               <p className="text-base clr-neutral fw-b-bold flex items-baseline gap-2">
                 angelogpradella@gmail.com
-                <i className="up-transition cursor-pointer fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                <a
+                  href="mailto:angelogpradella@gmmail.com"
+                  className="up-transition cursor-pointer fa-solid fa-arrow-up-right-from-square text-sm"
+                ></a>
               </p>
             </div>
 
             <div>
-              <h4>Lingue</h4>{" "}
-              <p className="text-base clr-neutral fw-b-bold flex gap-3">
-                <i className="flag-icon flag-icon-it"></i>
-                <i className="flag-icon flag-icon-gb"></i>
+              <h4>Linkedin</h4>{" "}
+              <p className="text-base clr-neutral fw-b-bold flex gap-2">
+                {/* <i className="flag-icon flag-icon-it"></i>
+                <i className="flag-icon flag-icon-gb"></i> */}
+                Le mie attività
+                <a
+                  href="https://www.linkedin.com/in/angelo-giovanni-pradella-fullstack-web-developer/"
+                  target="_blank"
+                  className="up-transition cursor-pointer fa-solid fa-arrow-up-right-from-square text-sm"
+                ></a>
               </p>
             </div>
 
