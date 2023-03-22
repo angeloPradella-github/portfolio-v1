@@ -1,6 +1,6 @@
 export default function HeroSection() {
   return (
-    <div className="hero-section mx-auto">
+    <section className="hero-section mx-auto">
       <h4 className="ff-accent clr-accent mb-5">Ciao, sono</h4>
       <h1 className="fw-h-bold">Angelo G. Pradella</h1>
       <p className="max-w-lg">
@@ -17,6 +17,6 @@ export default function HeroSection() {
           PROGETTI
         </a>
       </div>
-    </div>
+    </section>
   );
 }

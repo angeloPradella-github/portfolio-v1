@@ -69,3 +69,26 @@
 .switch-container label:active:after {
   width: 23px;
 }
+
+/* ________________about me section_____________ */
+.profile-pic {
+  border-radius: 6px;
+  top: -20%;
+  max-width: 100%;
+  object-fit: cover;
+  /* border: 1px solid var(--clr-accent); */
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.209);
+  background-color: white;
+}
+
+.extra-info-wrapper {
+  background-color: var(--extra-info-bg);
+  border-radius: 4px;
+}
+
+h4 {
+  color: var(--clr-accent);
+  font-size: var(--fs-h4);
+  font-weight: 500;
+  opacity: 50%;
+}

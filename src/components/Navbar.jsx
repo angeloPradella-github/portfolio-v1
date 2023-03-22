@@ -29,25 +29,25 @@ export default function Navbar() {
   return (
     <nav
       id="navbar"
-      className={`flex justify-between ff-accent clr-neutral gap-6 px-7 py-5 fs-nav fixed w-full 
+      className={`flex justify-between ff-accent clr-neutral gap-6 px-7 py-3 fs-nav fixed w-full 
         ${bg ? "bg-nav" : "bg-transparent"}
         ${visible ? "animate-navbar-down" : "animate-navbar-up"}`}
     >
       <div className="flex gap-6 items-center">
         <a className="" href="">
-          <li className="list-none nav-item">Profilo</li>
+          <li className="list-none underline-hover fw-b-bold">Profilo</li>
         </a>
         <a className="" href="">
-          <li className="list-none nav-item">Competenze</li>
+          <li className="list-none underline-hover fw-b-bold">Competenze</li>
         </a>
         <a className="" href="">
-          <li className="list-none nav-item">Progetti</li>
+          <li className="list-none underline-hover fw-b-bold">Progetti</li>
         </a>
         <a className="" href="">
-          <li className="list-none nav-item">Contattami</li>
+          <li className="list-none underline-hover fw-b-bold">Contattami</li>
         </a>
       </div>
-      <a className="btn btn-empty clr-accent duration-100" href="">
+      <a className="btn btn-empty fw-b-bold clr-accent duration-100" href="">
         Curriculum
       </a>
     </nav>
