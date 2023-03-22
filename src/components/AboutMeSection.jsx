@@ -8,14 +8,14 @@ export default function AboutMeSection() {
         {/* ------------Description colum------------ */}
         <div className="w-full md:w-2/3 px-7">
           <h2 className="fs-h2 fw-h-bold clr-neutral h2-b-bottom">Profilo.</h2>
-          <p className="mt-3">
+          <p className="mt-3 text-justify md:text-left">
             Dopo aver conseguito il diploma di Perito Informatico, ho
             approfondito il mio interesse per lo{" "}
             <span className="clr-accent">sviluppo web</span> attraverso un corso
             di formazione FullStack, ampliando le mie competenze sia in ambito
             front-end che back-end.
           </p>
-          <p className="mt-3">
+          <p className="mt-3 text-justify md:text-left">
             Le mie principali competenze includono la programmazione orientata
             agli oggetti e lo sviluppo di applicazioni web dinamiche con
             l'utilizzo di diversi linguaggi, framework e tecnologie. Ho maturato
@@ -24,7 +24,7 @@ export default function AboutMeSection() {
             Client-Server tramite chiamate a{" "}
             <span className="clr-accent">Webservice</span>.
           </p>
-          <p className="mt-3">
+          <p className="mt-3 text-justify md:text-left">
             Nel mio lavoro, ambisco a coniugare tecnica e creatività,
             valorizzando le mie competenze informatiche per dar vita a soluzioni
             web efficaci e piacevoli da utilizzare.
