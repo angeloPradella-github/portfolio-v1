@@ -101,9 +101,21 @@
   font-size: var(--fs-h2);
 }
 
-.h2-b-bottom {
-  border-bottom: 1px solid var(--clr-neutral-opaque);
-  line-height: 75%;
+.h2-b-side {
+  overflow: hidden;
+  text-align: left;
+}
+
+.h2-b-side::after {
+  background-color: var(--clr-neutral-opaque);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 100%;
+  left: 0.5em;
+  margin-right: -50%;
 }
 /* ------------------ */
 

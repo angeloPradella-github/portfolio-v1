@@ -7,7 +7,7 @@ export default function AboutMeSection() {
       <div className="flex flex-wrap">
         {/* ------------Description colum------------ */}
         <div className="w-full lg:w-2/3 lg:px-7">
-          <h2 className="fs-h2 fw-h-bold clr-neutral h2-b-bottom">Profilo.</h2>
+          <h2 className="fs-h2 fw-h-bold clr-neutral h2-b-side">Profilo.</h2>
           <p className="mt-3 text-justify lg:text-left">
             Dopo aver conseguito il diploma di Perito Informatico, ho
             approfondito il mio interesse per lo{" "}
