@@ -17,7 +17,7 @@ export default function HeroSection() {
           CONTATTAMI
         </a>
         <a
-          className="max-w-[154px] btn-big ff-accent btn-full up-transition"
+          className="max-w-[154px] btn-big ff-accent btn-full up-transition text-center"
           href="#"
         >
           PROGETTI
