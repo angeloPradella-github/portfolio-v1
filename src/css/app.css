@@ -330,7 +330,7 @@ button {
   backdrop-filter: blur(5.5px);
   -webkit-backdrop-filter: blur(5.9px);
   outline: 1px solid rgba(255, 255, 255, 0.4);
-  width: 60%;
+  width: 60% !important;
   border-radius: 4px;
   top: 15px;
   z-index: 2;

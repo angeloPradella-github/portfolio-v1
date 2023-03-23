@@ -6,6 +6,7 @@ export default function Navbar() {
   const prevScrollPosRef = useRef(0);
   const [visible, setVisible] = useState(true);
   const [bg, setBg] = useState(false);
+  const [mobile, setMobile] = useState(false);
 
   const isMdOrLarger = useMediaQuery({ minWidth: 1023 });
 
@@ -40,10 +41,13 @@ export default function Navbar() {
           ? `nav-desktop ${bg ? "bg-nav" : "bg-transparent"} ${
               visible ? "animate-navbar-down" : "animate-navbar-up"
             }`
-          : "nav-mobile items-center"
+          : "nav-mobile items-center flex-wrap"
       }`}
     >
-      <div id="navList" className="flex gap-6 items-center disappear">
+      <div
+        id="navList"
+        className="flex flex-col lg:flex-row lg:gap-6 items-center w-full order-3 lg:order-0 lg:w-auto"
+      >
         <a className="" href="">
           <li className="list-none underline-hover fw-b-bold">Profilo</li>
         </a>
@@ -61,7 +65,7 @@ export default function Navbar() {
         Curriculum
       </a>
       {/* Hamburger Menu */}
-      <i className="fa-solid fa-bars text-2xl clr-neutral"></i>
+      <i className="fa-solid fa-bars text-2xl clr-neutral cursor-pointer lg:hidden"></i>
     </nav>
   );
 }
