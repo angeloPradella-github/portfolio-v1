@@ -3,7 +3,7 @@ import ProfilePic from "../assets/img_square1.jpg";
 
 export default function AboutMeSection() {
   return (
-    <section className="about-me mx-auto max-w-[900px]">
+    <section id="about" className="about-me mx-auto max-w-[900px]">
       <div className="flex flex-wrap">
         {/* ------------Description colum------------ */}
         <div className="w-full lg:w-2/3 lg:px-7">

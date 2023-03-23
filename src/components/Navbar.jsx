@@ -69,25 +69,25 @@ export default function Navbar() {
       >
         <a
           className="py-2 border-b-acc lg:border-none w-full text-center"
-          href=""
+          href="#about"
         >
           <li className="list-none lg:underline-hover fw-b-bold">Profilo</li>
         </a>
         <a
           className="py-2 border-b-acc lg:border-none w-full text-center"
-          href=""
+          href="#skills"
         >
           <li className="list-none lg:underline-hover fw-b-bold">Competenze</li>
         </a>
         <a
           className="py-2 border-b-acc lg:border-none w-full text-center"
-          href=""
+          href="#projects"
         >
           <li className="list-none lg:underline-hover fw-b-bold">Progetti</li>
         </a>
         <a
           className="py-2 border-b-acc lg:border-none w-full text-center"
-          href=""
+          href="#contacts"
         >
           <li className="list-none lg:underline-hover fw-b-bold">Contattami</li>
         </a>
