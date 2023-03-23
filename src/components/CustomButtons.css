@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    padding: 10px 15px;
+  }
+  .btn-big {
+    padding: 16px 28px;
+  }
+
+  .btn-sm {
+    padding: 6px 10px;
+    transition: 0.15s ease-in-out;
+  }
+}

@@ -61,7 +61,7 @@
 }
 
 .btn-full {
-  color: var(--clr-light);
+  color: #e6e6e6 !important;
   border: 1px solid var(--clr-accent);
   border-radius: var(--btn-border-radius);
   background-color: var(--clr-accent);
@@ -69,14 +69,6 @@
 .btn-full:hover {
   background-color: transparent;
   color: var(--clr-accent) !important;
-}
-
-.btn-big {
-  padding: 16px 28px;
-}
-
-.btn {
-  padding: 10px 15px;
 }
 
 /* ____________________________ */
@@ -145,7 +137,7 @@ h6 {
   line-height: normal;
 }
 
-h1 {
+.hero-section h1 {
   color: var(--clr-neutral);
   font-size: var(--fs-h1);
 }

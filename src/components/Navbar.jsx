@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
+import "./CustomButtons.css";
 
 export default function Navbar() {
   const prevScrollPosRef = useRef(0);
@@ -34,16 +35,15 @@ export default function Navbar() {
   return (
     <nav
       id="navbar"
-      className={`flex justify-end lg:justify-between ff-accent clr-neutral gap-6 px-7 py-3 fs-nav fixed w-full ${
+      className={`flex justify-between ff-accent clr-neutral gap-6 px-5 py-2 lg:px-7 lg:py-3 fs-nav fixed w-full ${
         isMdOrLarger
           ? `nav-desktop ${bg ? "bg-nav" : "bg-transparent"} ${
               visible ? "animate-navbar-down" : "animate-navbar-up"
             }`
-          : "nav-mobile justify-items-end"
+          : "nav-mobile items-center"
       }`}
     >
-      <i className="fa-solid fa-bars text-lg clr-neutral"></i>
-      <div className="flex gap-6 items-center disappear">
+      <div id="navList" className="flex gap-6 items-center disappear">
         <a className="" href="">
           <li className="list-none underline-hover fw-b-bold">Profilo</li>
         </a>
@@ -57,9 +57,11 @@ export default function Navbar() {
           <li className="list-none underline-hover fw-b-bold">Contattami</li>
         </a>
       </div>
-      <a className="btn btn-empty fw-b-bold clr-accent disappear" href="">
+      <a className="btn-sm lg:btn btn-full lg:btn-empty fw-b-bold" href="">
         Curriculum
       </a>
+      {/* Hamburger Menu */}
+      <i className="fa-solid fa-bars text-2xl clr-neutral"></i>
     </nav>
   );
 }
