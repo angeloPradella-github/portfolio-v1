@@ -62,6 +62,7 @@ export default function AboutMeSection() {
               <p
                 className="text-base clr-neutral fw-b-bold flex gap-2 c-tooltip relative"
                 aria-label="Nuovi Progetti, Certificati ..."
+                data-direction="top"
               >
                 {/* <i className="flag-icon flag-icon-it"></i>
                 <i className="flag-icon flag-icon-gb"></i> */}
@@ -80,6 +81,7 @@ export default function AboutMeSection() {
                 className="text-base clr-neutral fw-b-bold flex gap-2
               c-tooltip relative"
                 aria-label="Formazione, Istruzione ..."
+                data-direction="top"
               >
                 Scarica PDF{" "}
                 <i className="cursor-pointer up-transition fa-solid fa-file-arrow-down"></i>

@@ -339,27 +339,35 @@ button {
 .bg-transparent {
   background: rgba(255, 255, 255, 0);
 }
-
+/* ____________________________TOOLTIPS__________________________ */
 .c-tooltip::before,
 .c-tooltip::after {
   display: block;
   position: absolute;
-  left: 50%;
-  transform: translate(-50%, -10px);
   opacity: 0;
   transition: 0.2s;
 }
 
+.c-tooltip[data-direction="top"]::before,
+.c-tooltip[data-direction="top"]::after {
+  left: 50%;
+  transform: translate(-50%, -10px);
+}
+
+.c-tooltip[data-direction="bottom"]::before,
+.c-tooltip[data-direction="bottom"]::after {
+  left: 50%;
+  transform: translate(-50%, 10px);
+}
+
+/* Stili specifici per la freccia e il contenuto del tooltip */
 .c-tooltip::before {
   content: "";
-  bottom: calc(100% - 7px);
   border: solid 5px transparent;
-  border-top-color: currentColor;
 }
 
 .c-tooltip::after {
   content: attr(aria-label);
-  bottom: calc(100% + 2px);
   padding: 8px 10px;
   font-size: 12px;
   color: var(--clr-light);
@@ -369,8 +377,72 @@ button {
   line-height: normal;
 }
 
+/* Stili per la posizione della freccia e del contenuto del tooltip */
+.c-tooltip[data-direction="top"]::before {
+  bottom: calc(100% - 7px);
+  border-top-color: currentColor;
+}
+
+.c-tooltip[data-direction="bottom"]::before {
+  top: calc(100% - 7px);
+  border-bottom-color: currentColor;
+}
+
+.c-tooltip[data-direction="left"]::before {
+  right: calc(100% - 6.5px);
+  border-left-color: currentColor;
+}
+
+.c-tooltip[data-direction="left"]::before,
+.c-tooltip[data-direction="left"]::after {
+  top: 50%;
+}
+
+.c-tooltip[data-direction="right"]::before,
+.c-tooltip[data-direction="right"]::after {
+  top: 50%;
+}
+
+.c-tooltip[data-direction="right"]::before {
+  left: calc(100% - 7px);
+  border-right-color: currentColor;
+}
+
+.c-tooltip[data-direction="top"]::after {
+  bottom: calc(100% + 2px);
+}
+
+.c-tooltip[data-direction="bottom"]::after {
+  top: calc(100% + 2px);
+}
+
+.c-tooltip[data-direction="left"]::after {
+  right: calc(100% + 2px);
+}
+
+.c-tooltip[data-direction="right"]::after {
+  left: calc(100% + 2px);
+}
+
+/* Stili per il passaggio del mouse */
 .c-tooltip:hover::before,
 .c-tooltip:hover::after {
   opacity: 1;
+}
+
+.c-tooltip[data-direction="top"]:hover::before,
+.c-tooltip[data-direction="top"]:hover::after,
+.c-tooltip[data-direction="bottom"]:hover::before,
+.c-tooltip[data-direction="bottom"]:hover::after {
   transform: translate(-50%);
+}
+
+.c-tooltip[data-direction="left"]:hover::before,
+.c-tooltip[data-direction="left"]:hover::after {
+  transform: translateY(-50%) translateX(-10px);
+}
+
+.c-tooltip[data-direction="right"]:hover::before,
+.c-tooltip[data-direction="right"]:hover::after {
+  transform: translateY(-50%) translateX(10px);
 }
