@@ -1,6 +1,6 @@
 import HeroSection from "../components/HeroSection";
 import AboutMeSection from "../components/AboutMeSection";
-import SkillsSection from "../components/SkillsSection";
+import SkillsSection from "../components/SkillsContainer/SkillsSection";
 
 export default function Index() {
   return (
