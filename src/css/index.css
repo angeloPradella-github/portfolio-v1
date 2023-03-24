@@ -86,9 +86,64 @@
   border-radius: 4px;
 }
 
-h4 {
+.about-me h4 {
   color: var(--clr-accent);
   font-size: var(--fs-h4);
   font-weight: 500;
   opacity: 50%;
+}
+
+/* ---------------ANT TAB SKILLS SECTION--------------- */
+/* Cambia il colore della barra di progressione a rosso */
+#root .ant-tabs-ink-bar {
+  background-color: var(--clr-accent);
+}
+
+/* Imposta uno sfondo rosso opaco per l'opzione attiva */
+#root .ant-tabs-tab-active {
+  background-color: rgba(0, 102, 255, 0.1);
+}
+
+/* Rimuovi il margine tra le opzioni */
+#root .ant-tabs-tab {
+  margin: 0;
+  transition: 0.1s ease-in;
+}
+
+#root .ant-tabs-tab:hover {
+  background-color: rgba(0, 102, 255, 0.1);
+}
+
+/* Sposta la barra di progressione a sinistra */
+#root .ant-tabs.ant-tabs-left .ant-tabs-nav-wrap {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#root .ant-tabs.ant-tabs-left .ant-tabs-tab {
+  order: 1 !important;
+}
+
+#root .ant-tabs.ant-tabs-left .ant-tabs-ink-bar {
+  order: 2 !important;
+}
+
+/* ___________________________SKILLS_____________________ */
+
+.skills h6 {
+  font-family: var(--ff-accent);
+  font-size: 12px;
+}
+
+.skills h5 {
+  font-weight: 500;
+  line-height: 1 !important;
+  font-size: 24px;
+}
+
+.skills h4 {
+  font-size: 20px;
+  text-transform: capitalize;
+  margin-top: 8px;
+  font-style: italic;
 }

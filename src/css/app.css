@@ -50,6 +50,9 @@
 }
 
 /* ---------UTILS--------- */
+.ant-tag {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
 .btn-empty {
   border: 1px solid var(--clr-accent);
@@ -101,6 +104,10 @@
   font-size: var(--fs-h2);
 }
 
+.fs-p {
+  font-size: var(--fs-p) !important;
+}
+
 .h2-b-side {
   overflow: hidden;
   text-align: left;
@@ -131,6 +138,9 @@
 /* ------------------ */
 .ff-accent {
   font-family: var(--ff-accent);
+}
+.ff-normal {
+  font-family: var(--ff-normal);
 }
 
 body {
