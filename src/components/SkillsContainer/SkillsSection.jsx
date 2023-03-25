@@ -4,7 +4,9 @@ import { useMediaQuery } from "react-responsive";
 
 // Sezioni
 import Languages from "./Languages";
-import FrameworksAndTech from "./FrameworksAndTech";
+import Framework from "./Framework";
+import Tech from "./Tech";
+
 import Software from "./Software";
 import SoftSkills from "./SoftSkills";
 
@@ -42,9 +44,19 @@ export default function SkillsSection() {
           <h6>Framework</h6>
         </>
       ),
-      // ---------------Tecnologie e framework---------------
+      // ---------------framework---------------
       key: "2",
-      children: <FrameworksAndTech tagContainerStyle={tagContainerStyle} />,
+      children: <Framework tagContainerStyle={tagContainerStyle} />,
+    },
+    {
+      label: (
+        <>
+          <h6>Tecnologie</h6>
+        </>
+      ),
+      // ---------------Tecnologie---------------
+      key: "3",
+      children: <Tech tagContainerStyle={tagContainerStyle} />,
     },
     {
       label: (
@@ -52,7 +64,7 @@ export default function SkillsSection() {
           <h6>Software</h6>
         </>
       ),
-      key: "3",
+      key: "4",
       children: <Software tagContainerStyle={tagContainerStyle} />,
     },
     {

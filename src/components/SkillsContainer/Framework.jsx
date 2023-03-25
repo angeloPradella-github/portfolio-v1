@@ -2,7 +2,7 @@ import { Tag, Menu } from "antd";
 import { useState } from "react";
 import "./skillsStyles.css";
 
-const Languages = ({ tagContainerStyle }) => {
+const Framework = ({ tagContainerStyle }) => {
   const [currentTab, setCurrentTab] = useState("frontend");
 
   const handleClick = (e) => {
@@ -14,35 +14,51 @@ const Languages = ({ tagContainerStyle }) => {
       case "frontend":
         return (
           <>
+            {/* Sezione frontend */}
             <h5 className="mt-4">
-              <span className="clr-accent ">Linguaggi</span>.
+              Framework <span className="clr-accent ">Frontend</span>.
             </h5>
-            <p className="text-sm opacity-60">Consolidati</p>
-            <div style={tagContainerStyle}>
-              <Tag color="#f06529df">HTML</Tag>
-              <Tag color="#2965f1df">CSS</Tag>
-              <Tag color="#fadb14df">JavaScript</Tag>
+            <div className="flex flex-wrap gap-2 mb-4">
+              <article className="mr-4">
+                <p className="text-sm opacity-60">Consolidati</p>
+                <div style={tagContainerStyle}>
+                  <Tag color="#563d7c">Bootstrap</Tag>
+                  <Tag color="#5454ec">Tailwind</Tag>
+                </div>
+              </article>
+
+              <article className="">
+                <p className="text-sm opacity-60">Familiari o Apprendimento</p>
+                <div style={tagContainerStyle}>
+                  <Tag color="#3abee0">React</Tag>
+                  <Tag style={{ backgroundColor: "light" }}>
+                    {" "}
+                    <span className="clr-neutral">NextJS</span>
+                  </Tag>
+                </div>
+              </article>
             </div>
           </>
         );
       case "backend":
         return (
           <>
+            {/* Sezione backend */}
             <h5 className="mt-4">
-              <span className="clr-accent ">Linguaggi</span>.
+              Framework <span className="clr-accent ">Backend</span>.
             </h5>
             <div className="flex flex-wrap gap-2">
               <article className="mr-4">
                 <p className="text-sm opacity-60">Consolidati</p>
                 <div style={tagContainerStyle}>
-                  <Tag color="#7b74e8">PHP</Tag>
+                  <Tag color="#F05340">Laravel</Tag>
                 </div>
               </article>
+
               <article className="">
                 <p className="text-sm opacity-60">Familiari o Apprendimento</p>
                 <div style={tagContainerStyle}>
-                  <Tag color="#f89820">Java</Tag>
-                  <Tag color="#5E97D0">C++</Tag>
+                  <Tag color="#68A063">ExpressJS</Tag>
                 </div>
               </article>
             </div>
@@ -69,4 +85,4 @@ const Languages = ({ tagContainerStyle }) => {
   );
 };
 
-export default Languages;
+export default Framework;
