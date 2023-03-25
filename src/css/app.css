@@ -231,6 +231,10 @@ button {
   width: 12px;
 }
 
+::-webkit-scrollbar {
+  height: 11.5px;
+}
+
 ::-webkit-scrollbar-track {
   background-color: transparent;
 }

@@ -45,10 +45,16 @@
 #root .ant-tabs-nav-list {
   width: 100% !important;
 }
+
 @media screen and (max-width: 640px) {
   #root .ant-tabs-tab {
     width: 100% !important;
     justify-content: center;
     padding: 10px 6px;
+  }
+
+  #root .ant-tabs-nav-wrap {
+    overflow-x: auto;
+    scrollbar-width: thin;
   }
 }
