@@ -44,7 +44,7 @@ export default function SkillsSection() {
       ),
       // ---------------Tecnologie e framework---------------
       key: "2",
-      children: <Tabs items={Languages({ tagContainerStyle })} />,
+      children: <FrameworksAndTech tagContainerStyle={tagContainerStyle} />,
     },
     {
       label: (

@@ -41,7 +41,7 @@ export default function Navbar() {
   return (
     <nav
       id="navbar"
-      className={`flex ff-accent clr-neutral lg:gap-6 px-5 py-2 lg:px-7 lg:py-3 fs-nav fixed w-full ${
+      className={`flex ff-accent clr-neutral lg:gap-6 px-5 py-2 lg:px-7 lg:py-3 fs-nav fixed w-full z-10 ${
         isMdOrLarger
           ? `nav-desktop ${navbarState.bg ? "bg-nav" : "bg-transparent"} ${
               navbarState.visible ? "animate-navbar-down" : "animate-navbar-up"
