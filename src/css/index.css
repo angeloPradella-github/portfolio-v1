@@ -112,10 +112,10 @@
 
 #root .ant-tabs-tab:hover {
   background-color: rgba(0, 102, 255, 0.1);
+  color: var(--clr-accent);
 }
 
-/* Sposta la barra di progressione a sinistra */
-#root .ant-tabs.ant-tabs-left .ant-tabs-nav-wrap {
+/* #root .ant-tabs.ant-tabs-left .ant-tabs-nav-wrap {
   display: flex;
   flex-direction: row-reverse;
 }
@@ -126,7 +126,7 @@
 
 #root .ant-tabs.ant-tabs-left .ant-tabs-ink-bar {
   order: 2 !important;
-}
+} */
 
 /* ___________________________SKILLS_____________________ */
 

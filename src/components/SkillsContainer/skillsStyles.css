@@ -1,0 +1,54 @@
+#root .ant-menu-item-only-child {
+  height: auto !important;
+  line-height: initial;
+}
+
+#root .ant-menu-item-only-child::after {
+  border: none;
+}
+
+#root .ant-menu-item {
+  padding-top: 4.5px;
+  font-size: 18px;
+  margin-right: 16px;
+  font-family: var(--ff-normal);
+  border: 1px solid var(--clr-neutral);
+  border-radius: 4px;
+  color: var(--clr-neutral);
+}
+
+#root .ant-menu-item-selected {
+  color: var(--clr-accent);
+  border-color: var(--clr-accent);
+}
+
+#root .ant-menu-item-active {
+  border-color: var(--clr-accent);
+  color: var(--clr-accent);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#root .ant-menu-item-selected::after {
+  border: none;
+}
+
+#root .ant-menu-item-active::after {
+  border: none;
+}
+
+#root .ant-tabs-nav-wrap {
+  width: 100% !important;
+  display: flex;
+  justify-content: space-between !important;
+}
+
+#root .ant-tabs-nav-list {
+  width: 100% !important;
+}
+@media screen and (max-width: 640px) {
+  #root .ant-tabs-tab {
+    width: 100% !important;
+    justify-content: center;
+    padding: 10px 6px;
+  }
+}

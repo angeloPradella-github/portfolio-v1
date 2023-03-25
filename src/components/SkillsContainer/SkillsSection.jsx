@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Tabs } from "antd";
-import { Tag } from "antd";
+import { useMediaQuery } from "react-responsive";
 
 // Sezioni
 import Languages from "./Languages";
@@ -10,6 +10,7 @@ import SoftSkills from "./SoftSkills";
 
 export default function SkillsSection() {
   const [activeKey, setActiveKey] = useState("1");
+  const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
 
   const handleTabChange = (key) => {
     setActiveKey(key);
@@ -38,15 +39,12 @@ export default function SkillsSection() {
     {
       label: (
         <>
-          <h6>
-            Framework e<br />
-            Tecnologie
-          </h6>
+          <h6>Framework</h6>
         </>
       ),
       // ---------------Tecnologie e framework---------------
       key: "2",
-      children: <FrameworksAndTech tagContainerStyle={tagContainerStyle} />,
+      children: <Tabs items={Languages({ tagContainerStyle })} />,
     },
     {
       label: (
@@ -77,12 +75,13 @@ export default function SkillsSection() {
         Skills.
       </h2>
       <Tabs
-        tabPosition="left"
+        tabPosition={isMobile ? "top" : "left"}
+        tabBarGutter={isMobile ? 10 : undefined}
         activeKey={activeKey}
         onChange={handleTabChange}
         items={tabItems}
         style={{}}
-        className="max-w-fit clr-neutral ff-normal fs-p"
+        className="w-full clr-neutral ff-normal fs-p"
       />
     </section>
   );
