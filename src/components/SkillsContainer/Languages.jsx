@@ -43,6 +43,7 @@ const Languages = ({ tagContainerStyle }) => {
                 <div style={tagContainerStyle}>
                   <Tag color="#f89820">Java</Tag>
                   <Tag color="#5E97D0">C++</Tag>
+                  <Tag color="#E68A10">SQL</Tag>
                 </div>
               </article>
             </div>

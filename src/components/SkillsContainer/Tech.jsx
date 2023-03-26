@@ -22,16 +22,16 @@ const Tech = ({ tagContainerStyle }) => {
               <article className="mr-4">
                 <p className="text-sm opacity-60">Consolidati</p>
                 <div style={tagContainerStyle}>
-                  <Tag color="#5454ec">Ajax</Tag>
-                  <Tag color="#5454ec">Axios</Tag>
-                  <Tag color="#5454ec">Eloquent</Tag>
+                  <Tag color="#3989C4">AJAX</Tag>
+                  <Tag color="#6222DD">Axios</Tag>
+                  <Tag color="#F27473">Eloquent</Tag>
                 </div>
               </article>
 
               <article className="">
                 <p className="text-sm opacity-60">Familiari o Apprendimento</p>
                 <div style={tagContainerStyle}>
-                  <Tag color="#563d7c">MySQL</Tag>
+                  <Tag color="#E68A10">MySQL</Tag>
                 </div>
               </article>
             </div>
@@ -42,7 +42,7 @@ const Tech = ({ tagContainerStyle }) => {
           <>
             {/* Sezione backend */}
             <h5 className="mt-4">
-              <span className="clr-accent ">Librerie.</span>
+              <span className="clr-accent">Librerie</span>.
             </h5>
             <div className="flex flex-wrap gap-2">
               <article className="mr-4">
@@ -56,8 +56,8 @@ const Tech = ({ tagContainerStyle }) => {
               <article className="">
                 <p className="text-sm opacity-60">Familiari o Apprendimento</p>
                 <div style={tagContainerStyle}>
-                  <Tag color="#68A063">JQuery</Tag>
-                  <Tag color="#68A063">Ant Design</Tag>
+                  <Tag color="#78cff5">JQuery</Tag>
+                  <Tag color="#1890ff">Ant Design</Tag>
                 </div>
               </article>
             </div>
