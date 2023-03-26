@@ -147,3 +147,25 @@
   margin-top: 8px;
   font-style: italic;
 }
+
+/* __________[PROJECT SECTION]__________ */
+
+.project-card {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-card::before {
+  position: absolute;
+  background: radial-gradient(
+    800px circle at 100px 100px rgb(255, 255, 255, 0.06) transparent 40%
+  );
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 2;
+}

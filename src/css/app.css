@@ -247,7 +247,7 @@ button {
 
 /* ______________________________________________________ */
 .app-layout {
-  --main-padding: 150px;
+  --main-padding: 90px;
 
   padding-inline: var(--main-padding);
   margin-inline: auto;

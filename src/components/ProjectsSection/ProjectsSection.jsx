@@ -7,10 +7,50 @@ const ProjectsSection = () => {
 
   // Creazione dell'array di progetti finti
   const projects = [
-    { id: 1, title: "Progetto 1", category: "webapp" },
-    { id: 2, title: "Progetto 2", category: "frontend" },
-    { id: 3, title: "Progetto 3", category: "test" },
-    { id: 4, title: "Progetto 4", category: "webapp" },
+    {
+      id: 1,
+      title: "Progetto 1",
+      description: "lorem Ipsum dolor sit amet",
+      importance: 4,
+      category: "webapp",
+      tech: ["react", "js", "larave"],
+      imgPath: "lorempicusm",
+      repoLink: "",
+      demoLink: "",
+    },
+    {
+      id: 2,
+      title: "Progetto 2",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      importance: 5,
+      category: "frontend",
+      tech: ["HTML", "CSS", "JavaScript"],
+      imgPath: "lorempicsum",
+      repoLink: "https://github.com/example/progetto2",
+      demoLink: "https://example.com/progetto2",
+    },
+    {
+      id: 3,
+      title: "Progetto 3",
+      description: "Vivamus et nisi ut sapien ultricies dapibus",
+      importance: 0,
+      category: "test",
+      tech: ["Cypress", "Jest", "React Testing Library"],
+      imgPath: "lorempicsum",
+      repoLink: "https://github.com/example/progetto3",
+      demoLink: "https://example.com/progetto3",
+    },
+    {
+      id: 4,
+      title: "Progetto 4",
+      description: "Pellentesque cursus ligula id ligula laoreet imperdiet",
+      importance: 1,
+      category: "webapp",
+      tech: ["Node.js", "Express", "MongoDB"],
+      imgPath: "lorempicsum",
+      repoLink: "https://github.com/example/progetto4",
+      demoLink: "https://example.com/progetto4",
+    },
   ];
 
   const handleClick = (e) => {
@@ -46,7 +86,10 @@ const ProjectsSection = () => {
 
         {/* Mappatura dei progetti filtrati */}
 
-        <section id="projectsWrapper" className="flex flex-wrap justify-center">
+        <section
+          id="projectsWrapper"
+          className="flex flex-wrap gap-3 justify-center"
+        >
           {filteredProjects.map((project) => (
             <ProjectCard
               key={project.id}
