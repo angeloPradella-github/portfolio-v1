@@ -148,7 +148,27 @@
   font-style: italic;
 }
 
+.skills {
+  margin-bottom: 20rem;
+}
+
 /* __________[PROJECT SECTION]__________ */
+
+.projects .btn-container {
+  display: flex;
+  gap: 12px;
+  margin-top: 2rem;
+}
+
+.projects .btn-container button {
+  color: var(--clr-accent);
+  border: 1px solid var(--clr-accent);
+  border-radius: 5px;
+  line-height: 0.5;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  padding-inline: 8px;
+}
 
 .project-card {
   position: relative;
@@ -156,7 +176,6 @@
   border-radius: 8px;
   width: 100%;
   overflow: hidden;
-
   will-change: transform, opacity;
 }
 

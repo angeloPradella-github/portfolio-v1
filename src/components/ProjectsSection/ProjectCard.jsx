@@ -21,7 +21,7 @@ const ProjectCard = ({
 
   useEffect(() => {
     if (window.innerWidth > 768) {
-      VanillaTilt.init(tiltRef.current, options);
+      VanillaTilt.init(tiltRef.current, options); //non inzializzare l effeto su teelfoni
     }
   }, [options]);
 
@@ -31,18 +31,15 @@ const ProjectCard = ({
       ref={tiltRef}
       className="project-card w-full lg:w-[48%] drop-shadow-lg"
     >
-      {/* external links */}
-      <div
-        className={`project-link-container ${
-          !demoLink && !repoLink ? "hidden" : ""
-        }`}
-      >
+      <div className="project-link-container">
+        {/* MAC-OS details */}
         <article className="macOS-buttons">
           <span></span>
           <span></span>
           <span></span>
         </article>
 
+        {/* external links (mostra solo se link presente) */}
         <article className="flex items-center gap-3">
           {demoLink ? (
             <a className="project-link" href="">
@@ -64,7 +61,7 @@ const ProjectCard = ({
       {/* backgound */}
       <img className="project-img" src={imgPath} alt="" />
 
-      {/* hidden content */}
+      {/* hidden content (I dettagli del progetto) */}
       <div className="hidden-content flex justify-center flex-col px-5 py-3">
         <h3 className="clr-light-fix text-2xl lg:text-4xl drop-shadow-md">
           {title}

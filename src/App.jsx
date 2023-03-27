@@ -15,10 +15,9 @@ function App() {
       <Zoom zoom="125%" />
       <Navbar />
       <main className="app-layout">
+        <Index />
         <SwitchContainer />
         <Socials />
-
-        <Index />
       </main>
       <footer className="h-screen"></footer>
     </>

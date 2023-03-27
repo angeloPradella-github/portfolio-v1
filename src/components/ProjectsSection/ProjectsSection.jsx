@@ -69,7 +69,7 @@ const ProjectsSection = () => {
         <motion.div
           layout
           id="projectsWrapper"
-          className="flex flex-wrap gap-3 justify-center"
+          className="flex flex-wrap gap-3 justify-between"
         >
           <AnimatePresence>
             <Suspense fallback={<div>Caricamento...</div>}>
@@ -90,12 +90,18 @@ const ProjectsSection = () => {
         </motion.div>
       </div>
       {/* Mostra meno o più button */}
-      {projectsToShow < filteredProjects.length && (
-        <button onClick={handleShowMoreClick}>Carica altri</button>
-      )}
-      {projectsToShow > 4 && (
-        <button onClick={handleShowLessClick}>Mostra meno</button>
-      )}
+      <div className="btn-container">
+        {projectsToShow < filteredProjects.length && (
+          <button className="up-transition" onClick={handleShowMoreClick}>
+            Mostra altri ...
+          </button>
+        )}
+        {projectsToShow > 4 && (
+          <button className="up-transition" onClick={handleShowLessClick}>
+            Mostra meno <i className="fa-regular fa-eye-slash"></i>
+          </button>
+        )}
+      </div>
     </section>
   );
 };

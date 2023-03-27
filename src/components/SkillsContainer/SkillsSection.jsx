@@ -81,7 +81,7 @@ export default function SkillsSection() {
   return (
     <section
       id="skills"
-      className="skills lg:px-7 max-w-max justify-start flex mt-20 flex-wrap"
+      className="skills max-w-max justify-start md:mx-auto flex mt-20 flex-wrap"
     >
       <h2 className="fs-h2 fw-h-bold clr-neutral h2-b-side basis-[100%]">
         Skills.
