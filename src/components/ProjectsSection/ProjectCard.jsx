@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import VanillaTilt from "vanilla-tilt";
+import { motion } from "framer-motion";
 
 function ProjectCard({
   id,
@@ -23,7 +24,8 @@ function ProjectCard({
   }, [options]);
 
   return (
-    <article
+    <motion.div
+      layout
       ref={tiltRef}
       className="project-card w-full lg:w-[48%] drop-shadow-lg"
     >
@@ -77,7 +79,7 @@ function ProjectCard({
           ))}
         </div>
       </div>
-    </article>
+    </motion.div>
   );
 }
 

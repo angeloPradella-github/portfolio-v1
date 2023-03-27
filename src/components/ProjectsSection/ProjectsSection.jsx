@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu } from "antd";
 import ProjectCard from "./ProjectCard";
+import { motion, AnimatePresence } from "framer-motion";
 
 const ProjectsSection = () => {
   const [currentMenu, setCurrentMenu] = useState("all");
@@ -56,6 +57,18 @@ const ProjectsSection = () => {
       repoLink: "",
       demoLink: "https://example.com/progetto4",
     },
+    {
+      id: 5,
+      title: "Progetto 5",
+      description: "Pellentesque cursus ligula id ligula laoreet imperdiet",
+      importance: 1,
+      category: "webapp",
+      tech: ["Node.js", "Express", "MongoDB"],
+      imgPath:
+        "https://peterdraw.studio/wp-content/uploads/2022/01/TixCenter-Ticket-Booking-Website-Hero-Section.png",
+      repoLink: "",
+      demoLink: "https://example.com/progetto4",
+    },
   ];
 
   const handleClick = (e) => {
@@ -93,25 +106,28 @@ const ProjectsSection = () => {
 
         {/* Mappatura dei progetti filtrati */}
 
-        <section
+        <motion.div
+          layout
           id="projectsWrapper"
           className="flex flex-wrap gap-3 justify-center"
         >
-          {filteredProjects
-            .sort((a, b) => b.importance - a.importance)
-            .map((project) => (
-              <ProjectCard
-                key={project.id}
-                id={project.id}
-                title={project.title}
-                description={project.description}
-                tech={project.tech}
-                imgPath={project.imgPath}
-                repoLink={project.repoLink}
-                demoLink={project.demoLink}
-              />
-            ))}
-        </section>
+          <AnimatePresence>
+            {filteredProjects
+              .sort((a, b) => b.importance - a.importance)
+              .map((project) => (
+                <ProjectCard
+                  key={project.id}
+                  id={project.id}
+                  title={project.title}
+                  description={project.description}
+                  tech={project.tech}
+                  imgPath={project.imgPath}
+                  repoLink={project.repoLink}
+                  demoLink={project.demoLink}
+                />
+              ))}
+          </AnimatePresence>
+        </motion.div>
       </div>
     </section>
   );
