@@ -33,23 +33,33 @@ function ProjectCard({
           !demoLink && !repoLink ? "hidden" : ""
         }`}
       >
-        {demoLink ? (
-          <a className="project-link" href="">
-            <i className="fa-solid fa-up-right-from-square up-transition"></i>
-          </a>
-        ) : (
-          ""
-        )}
-        {repoLink ? (
-          <a className="project-link" href="">
-            <i className="fa-brands fa-github up-transition"></i>
-          </a>
-        ) : (
-          ""
-        )}
+        <article className="macOS-buttons">
+          <span></span>
+          <span></span>
+          <span></span>
+        </article>
+
+        <article className="flex items-center gap-3">
+          {demoLink ? (
+            <a className="project-link" href="">
+              <i className="fa-solid fa-up-right-from-square up-transition"></i>
+            </a>
+          ) : (
+            ""
+          )}
+          {repoLink ? (
+            <a className="project-link" href="">
+              <i className="fa-brands fa-github up-transition"></i>
+            </a>
+          ) : (
+            ""
+          )}
+        </article>
       </div>
+
       {/* backgound */}
       <img className="project-img" src={imgPath} alt="" />
+
       {/* hidden content */}
       <div className="hidden-content flex justify-center flex-col px-5 py-3">
         <h3 className="clr-light-fix text-2xl lg:text-4xl drop-shadow-md">

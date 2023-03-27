@@ -17,6 +17,22 @@
   color: var(--clr-neutral);
 }
 
+#root .ant-menu-item {
+  padding-top: 4.5px;
+  font-size: 18px;
+  margin-right: 16px;
+  font-family: var(--ff-normal);
+  border: 1px solid var(--clr-neutral);
+  border-radius: 4px;
+  color: var(--clr-neutral);
+}
+
+@media (min-width: 1024px) {
+  #root .projects .ant-menu-item {
+    font-size: 23px !important;
+  }
+}
+
 .margin-0 {
   margin: 0 !important;
 }
