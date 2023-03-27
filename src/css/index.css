@@ -152,7 +152,7 @@
 
 .project-card {
   position: relative;
-  min-height: 300px;
+  min-height: clamp(250px, 20vw, 370px);
   border-radius: 8px;
   width: 100%;
   overflow: hidden;
@@ -196,7 +196,7 @@
 
 .project-card h3 {
   font-weight: var(--fw-heading-bold);
-  font-size: 24px;
+  /* font-size: 24px; */
   transform: translateY(100%);
   transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   line-height: 0.9;
@@ -209,7 +209,7 @@
 .hidden-content p {
   transition: all 0.3s ease;
   transform: translateY(110%);
-  font-size: 16px;
+  /* font-size: 16px; */
   margin-bottom: 4px;
 }
 
@@ -238,7 +238,7 @@
   padding-top: 4px;
   padding-bottom: 2px;
   border-radius: 100vw;
-  font-size: 12px;
+  /* font-size: 12px; */
 }
 
 .project-link-container {

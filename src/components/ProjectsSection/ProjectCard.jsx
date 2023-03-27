@@ -14,7 +14,7 @@ function ProjectCard({
   const options = {
     max: 0,
     glare: true,
-    "max-glare": 0.2,
+    "max-glare": 0.12,
     "glare-prerender": false,
   };
 
@@ -52,11 +52,16 @@ function ProjectCard({
       <img className="project-img" src={imgPath} alt="" />
       {/* hidden content */}
       <div className="hidden-content flex justify-center flex-col px-5 py-3">
-        <h3 className="clr-light-fix drop-shadow-md">{title}</h3>
-        <p className="clr-light-fix">{description}</p>
+        <h3 className="clr-light-fix text-2xl lg:text-4xl drop-shadow-md">
+          {title}
+        </h3>
+        <p className="clr-light-fix text-base lg:text-xl ">{description}</p>
         <div className="flex flex-wrap gap-3 tech-container">
           {tech.map((techItem, i) => (
-            <span key={techItem + i} className="clr-light-fix pill">
+            <span
+              key={techItem + i}
+              className="clr-light-fix pill text-xs lg:text-base"
+            >
               {techItem}
             </span>
           ))}
