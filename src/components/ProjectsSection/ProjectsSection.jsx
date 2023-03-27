@@ -13,8 +13,9 @@ const ProjectsSection = () => {
       description: "lorem Ipsum dolor sit amet",
       importance: 4,
       category: "webapp",
-      tech: ["react", "js", "larave"],
-      imgPath: "lorempicusm",
+      tech: ["React", "JS", "MySQL"],
+      imgPath:
+        "https://images.unsplash.com/photo-1567581634552-3ed9154ae627?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1475&q=80",
       repoLink: "",
       demoLink: "",
     },
@@ -25,7 +26,8 @@ const ProjectsSection = () => {
       importance: 5,
       category: "frontend",
       tech: ["HTML", "CSS", "JavaScript"],
-      imgPath: "lorempicsum",
+      imgPath:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1115&q=80",
       repoLink: "https://github.com/example/progetto2",
       demoLink: "https://example.com/progetto2",
     },
@@ -36,7 +38,8 @@ const ProjectsSection = () => {
       importance: 0,
       category: "test",
       tech: ["Cypress", "Jest", "React Testing Library"],
-      imgPath: "lorempicsum",
+      imgPath:
+        "https://colibriwp.com/blog/wp-content/uploads/2019/11/colibri-business.png",
       repoLink: "https://github.com/example/progetto3",
       demoLink: "https://example.com/progetto3",
     },
@@ -47,7 +50,8 @@ const ProjectsSection = () => {
       importance: 1,
       category: "webapp",
       tech: ["Node.js", "Express", "MongoDB"],
-      imgPath: "lorempicsum",
+      imgPath:
+        "https://assets.justinmind.com/wp-content/uploads/2020/10/hero-image-illustration-airbnb.png",
       repoLink: "https://github.com/example/progetto4",
       demoLink: "https://example.com/progetto4",
     },
@@ -95,7 +99,13 @@ const ProjectsSection = () => {
               key={project.id}
               id={project.id}
               title={project.title}
+              description={project.description}
+              importance={project.importance}
               category={project.category}
+              tech={project.tech}
+              imgPath={project.imgPath}
+              repoLink={project.repoLink}
+              demoLink={project.demoLink}
             />
           ))}
         </section>

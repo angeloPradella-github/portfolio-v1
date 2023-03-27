@@ -15,7 +15,7 @@
   --clr-light: #fffbfb;
   --clr-dark: #111;
 
-  --clr-primary-hover: #d6d6d6;
+  --clr-light-fix: #fffbfb;
   --clr-accent-hover: #f5f5f7;
   /* --------- Font Family ----------*/
   --ff-normal: "Calibre", sans-serif;
@@ -134,6 +134,9 @@
 }
 .clr-light {
   color: var(--clr-light);
+}
+.clr-light-fix {
+  color: var(--clr-light-fix);
 }
 /* ------------------ */
 .ff-accent {
