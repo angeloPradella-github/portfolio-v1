@@ -156,6 +156,8 @@
   border-radius: 8px;
   width: 100%;
   overflow: hidden;
+
+  will-change: transform, opacity;
 }
 
 .project-card::before {
@@ -194,41 +196,43 @@
 
 /* unhover states */
 
-.project-card h3 {
-  font-weight: var(--fw-heading-bold);
-  /* font-size: 24px; */
-  transform: translateY(100%);
-  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
-  line-height: 0.9;
-}
+@media screen and (min-width: 768px) {
+  .project-card h3 {
+    font-weight: var(--fw-heading-bold);
+    /* font-size: 24px; */
+    transform: translateY(100%);
+    transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    line-height: 0.9;
+  }
 
-.hidden-content {
-  opacity: 0%;
-  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-.hidden-content p {
-  transition: all 0.3s ease;
-  transform: translateY(110%);
-  /* font-size: 16px; */
-  margin-bottom: 4px;
-}
+  .hidden-content {
+    opacity: 0%;
+    transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  .hidden-content p {
+    transition: all 0.3s ease;
+    transform: translateY(110%);
+    /* font-size: 16px; */
+    margin-bottom: 4px;
+  }
 
-.project-card .hidden-content .tech-container {
-  transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transform: translateY(120%);
-}
-/* //HOVERS */
-.project-card:hover .hidden-content {
-  opacity: 100%;
-}
-.project-card:hover .hidden-content h3 {
-  transform: translateY(0%);
-}
-.project-card:hover .hidden-content p {
-  transform: translateY(0%);
-}
-.project-card:hover .hidden-content .tech-container {
-  transform: translateY(0%);
+  .project-card .hidden-content .tech-container {
+    transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translateY(120%);
+  }
+  /* //HOVERS */
+  .project-card:hover .hidden-content {
+    opacity: 100%;
+  }
+  .project-card:hover .hidden-content h3 {
+    transform: translateY(0%);
+  }
+  .project-card:hover .hidden-content p {
+    transform: translateY(0%);
+  }
+  .project-card:hover .hidden-content .tech-container {
+    transform: translateY(0%);
+  }
 }
 
 .pill {

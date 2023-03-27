@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
 
-function ProjectCard({
+const ProjectCard = ({
   id,
   title,
   description,
@@ -10,7 +10,7 @@ function ProjectCard({
   imgPath,
   repoLink,
   demoLink,
-}) {
+}) => {
   const tiltRef = useRef(null);
   const options = {
     max: 0,
@@ -20,7 +20,9 @@ function ProjectCard({
   };
 
   useEffect(() => {
-    VanillaTilt.init(tiltRef.current, options);
+    if (window.innerWidth > 768) {
+      VanillaTilt.init(tiltRef.current, options);
+    }
   }, [options]);
 
   return (
@@ -81,6 +83,6 @@ function ProjectCard({
       </div>
     </motion.div>
   );
-}
+};
 
-export default ProjectCard;
+export default React.memo(ProjectCard);
