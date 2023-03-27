@@ -156,6 +156,7 @@
   border-radius: 8px;
   width: 100%;
   overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .project-card::before {
