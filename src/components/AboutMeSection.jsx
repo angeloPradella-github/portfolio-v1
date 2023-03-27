@@ -1,4 +1,4 @@
-// import ProfilePic from "../assets/profile-pic.png";
+import Intersecting from "./Intersecting";
 import ProfilePic from "../assets/img_square1.jpg";
 
 export default function AboutMeSection() {
@@ -6,8 +6,13 @@ export default function AboutMeSection() {
     <section id="about" className="about-me mx-auto max-w-[900px]">
       <div className="flex flex-wrap">
         {/* ------------Description colum------------ */}
-        <div className="w-full lg:w-2/3 lg:px-7">
-          <h2 className="fs-h2 fw-h-bold clr-neutral h2-b-side">Profilo.</h2>
+        <Intersecting.div className="w-full lg:w-2/3 lg:px-7">
+          <Intersecting.h2
+            threshold={0.1}
+            className="fs-h2 fw-h-bold clr-neutral h2-b-side"
+          >
+            Profilo.
+          </Intersecting.h2>
           <p className="mt-3 text-justify lg:text-left">
             Dopo aver conseguito il diploma di Perito Informatico, ho
             approfondito il mio interesse per lo{" "}
@@ -29,17 +34,23 @@ export default function AboutMeSection() {
             valorizzando le mie competenze informatiche per dar vita a soluzioni
             web efficaci e piacevoli da utilizzare.
           </p>
-        </div>
+        </Intersecting.div>
         {/* ------------Photo colum------------ */}
-        <div className="w-full lg:w-1/3 mt-5 lg:mt-0 lg:p-7 flex justify-center">
+        <Intersecting.div
+          threshold={0.7}
+          className="w-full lg:w-1/3 mt-5 lg:mt-0 lg:p-7 flex justify-center"
+        >
           <img
             className="profile-pic"
             src={ProfilePic}
             alt="Immagine Profilo"
           />
-        </div>
+        </Intersecting.div>
         {/* ------------Extra info row------------ */}
-        <section className="mt-6 w-full lg:px-7">
+        <Intersecting.section
+          className="mt-6 w-full lg:px-7 fade-in"
+          threshold={0.5}
+        >
           <div className="flex flex-wrap gap-3 justify-between extra-info-wrapper px-4 py-2">
             <div>
               <h4>Sede</h4>{" "}
@@ -88,7 +99,7 @@ export default function AboutMeSection() {
               </p>
             </div>
           </div>
-        </section>
+        </Intersecting.section>
       </div>
     </section>
   );

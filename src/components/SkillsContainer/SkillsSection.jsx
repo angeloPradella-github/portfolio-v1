@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Tabs } from "antd";
 import { useMediaQuery } from "react-responsive";
+import Intersecting from "../Intersecting";
 
 // Sezioni
 import Languages from "./Languages";
@@ -79,7 +80,8 @@ export default function SkillsSection() {
   ];
 
   return (
-    <section
+    <Intersecting.section
+      animationClass="fade-right"
       id="skills"
       className="skills max-w-max justify-start md:mx-auto flex mt-20 flex-wrap"
     >
@@ -95,6 +97,6 @@ export default function SkillsSection() {
         style={{}}
         className="w-full clr-neutral ff-normal fs-p"
       />
-    </section>
+    </Intersecting.section>
   );
 }

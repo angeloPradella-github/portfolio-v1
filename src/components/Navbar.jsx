@@ -71,25 +71,33 @@ export default function Navbar() {
           className="py-2 border-b-acc lg:border-none w-full text-center"
           href="#about"
         >
-          <li className="list-none lg:underline-hover fw-b-bold">Profilo</li>
+          <li className="list-none drop-shadow-[0_2px_6px_rgba(0,0,0,0.2)]  lg:underline-hover fw-b-bold">
+            Profilo
+          </li>
         </a>
         <a
           className="py-2 border-b-acc lg:border-none w-full text-center"
           href="#skills"
         >
-          <li className="list-none lg:underline-hover fw-b-bold">Competenze</li>
+          <li className="list-none drop-shadow-[0_2px_6px_rgba(0,0,0,0.2)] lg:underline-hover fw-b-bold">
+            Competenze
+          </li>
         </a>
         <a
           className="py-2 border-b-acc lg:border-none w-full text-center"
           href="#projects"
         >
-          <li className="list-none lg:underline-hover fw-b-bold">Progetti</li>
+          <li className="list-none drop-shadow-[0_2px_6px_rgba(0,0,0,0.2)]  lg:underline-hover fw-b-bold">
+            Progetti
+          </li>
         </a>
         <a
           className="py-2 border-b-acc lg:border-none w-full text-center"
           href="#contacts"
         >
-          <li className="list-none lg:underline-hover fw-b-bold">Contattami</li>
+          <li className="list-none drop-shadow-[0_2px_6px_rgba(0,0,0,0.2)]  lg:underline-hover fw-b-bold">
+            Contattami
+          </li>
         </a>
       </div>
     </nav>

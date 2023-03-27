@@ -54,10 +54,43 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(10vh);
+  transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.fade-right {
+  opacity: 0;
+  transform: translateX(-12vh);
+  transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.fade-left {
+  opacity: 0;
+  transform: translateX(10vh);
+  transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.fade-in.in-page {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.fade-right.in-page {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.fade-left.in-page {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
 .btn-empty {
   border: 1px solid var(--clr-accent);
   border-radius: var(--btn-border-radius);
-  color: var(--clr-accent);
+  color: var(--clr-accent) !important;
 }
 .btn-empty:hover {
   background-color: var(--clr-accent);
@@ -321,9 +354,9 @@ button {
 }
 
 .bg-nav {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.329);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(5.5px);
+  backdrop-filter: blur(6.5px);
   -webkit-backdrop-filter: blur(5.9px);
   outline: 1px solid rgba(255, 255, 255, 0.4);
   width: 60% !important;
