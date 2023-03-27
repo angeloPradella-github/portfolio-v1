@@ -17,6 +17,10 @@
   color: var(--clr-neutral);
 }
 
+.margin-0 {
+  margin: 0 !important;
+}
+
 #root .ant-menu-item-selected {
   color: var(--clr-accent);
   border-color: var(--clr-accent);

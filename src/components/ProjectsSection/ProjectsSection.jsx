@@ -22,14 +22,15 @@ const ProjectsSection = () => {
     {
       id: 2,
       title: "Progetto 2",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem agaga suua ayta ayay",
       importance: 5,
       category: "frontend",
       tech: ["HTML", "CSS", "JavaScript"],
       imgPath:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1115&q=80",
       repoLink: "https://github.com/example/progetto2",
-      demoLink: "https://example.com/progetto2",
+      demoLink: "",
     },
     {
       id: 3,
@@ -52,7 +53,7 @@ const ProjectsSection = () => {
       tech: ["Node.js", "Express", "MongoDB"],
       imgPath:
         "https://assets.justinmind.com/wp-content/uploads/2020/10/hero-image-illustration-airbnb.png",
-      repoLink: "https://github.com/example/progetto4",
+      repoLink: "",
       demoLink: "https://example.com/progetto4",
     },
   ];
@@ -85,7 +86,9 @@ const ProjectsSection = () => {
           <Menu.Item key="all">Tutti</Menu.Item>
           <Menu.Item key="webapp">Web App</Menu.Item>
           <Menu.Item key="frontend">Frontend</Menu.Item>
-          <Menu.Item key="test">Test</Menu.Item>
+          <Menu.Item key="test" className="margin-0">
+            Test
+          </Menu.Item>
         </Menu>
 
         {/* Mappatura dei progetti filtrati */}
@@ -94,20 +97,20 @@ const ProjectsSection = () => {
           id="projectsWrapper"
           className="flex flex-wrap gap-3 justify-center"
         >
-          {filteredProjects.map((project) => (
-            <ProjectCard
-              key={project.id}
-              id={project.id}
-              title={project.title}
-              description={project.description}
-              importance={project.importance}
-              category={project.category}
-              tech={project.tech}
-              imgPath={project.imgPath}
-              repoLink={project.repoLink}
-              demoLink={project.demoLink}
-            />
-          ))}
+          {filteredProjects
+            .sort((a, b) => b.importance - a.importance)
+            .map((project) => (
+              <ProjectCard
+                key={project.id}
+                id={project.id}
+                title={project.title}
+                description={project.description}
+                tech={project.tech}
+                imgPath={project.imgPath}
+                repoLink={project.repoLink}
+                demoLink={project.demoLink}
+              />
+            ))}
         </section>
       </div>
     </section>

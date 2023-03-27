@@ -5,8 +5,6 @@ function ProjectCard({
   id,
   title,
   description,
-  importance,
-  category,
   tech,
   imgPath,
   repoLink,
@@ -14,10 +12,10 @@ function ProjectCard({
 }) {
   const tiltRef = useRef(null);
   const options = {
-    max: 1, // Disabilita l'effetto di inclinazione
+    max: 0,
     glare: true,
-    "max-glare": 0.2, // Opacità massima del glare (1 = 100%, 0.5 = 50%)
-    "glare-prerender": false, // Se impostato a false, VanillaTilt crea gli elementi glare per te
+    "max-glare": 0.2,
+    "glare-prerender": false,
   };
 
   useEffect(() => {
@@ -25,11 +23,38 @@ function ProjectCard({
   }, [options]);
 
   return (
-    <article ref={tiltRef} className="project-card w-full lg:w-[48%]">
+    <article
+      ref={tiltRef}
+      className="project-card w-full lg:w-[48%] drop-shadow-lg"
+    >
+      {/* external links */}
+      <div
+        className={`project-link-container ${
+          !demoLink && !repoLink ? "hidden" : ""
+        }`}
+      >
+        {demoLink ? (
+          <a className="project-link" href="">
+            <i className="fa-solid fa-up-right-from-square up-transition"></i>
+          </a>
+        ) : (
+          ""
+        )}
+        {repoLink ? (
+          <a className="project-link" href="">
+            <i className="fa-brands fa-github up-transition"></i>
+          </a>
+        ) : (
+          ""
+        )}
+      </div>
+      {/* backgound */}
       <img className="project-img" src={imgPath} alt="" />
-      <div className="hidden-content flex justify-center flex-col px-5">
+      {/* hidden content */}
+      <div className="hidden-content flex justify-center flex-col px-5 py-3">
         <h3 className="clr-light-fix drop-shadow-md">{title}</h3>
-        <div className="flex flex-wrap gap-3 content-container">
+        <p className="clr-light-fix">{description}</p>
+        <div className="flex flex-wrap gap-3 tech-container">
           {tech.map((techItem, i) => (
             <span key={techItem + i} className="clr-light-fix pill">
               {techItem}
