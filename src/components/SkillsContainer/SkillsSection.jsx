@@ -81,7 +81,7 @@ export default function SkillsSection() {
     {
       label: (
         <>
-          <h6>Soft-SKills</h6>
+          <h6>Soft-Skills</h6>
         </>
       ),
       key: "5",
