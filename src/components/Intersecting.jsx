@@ -16,10 +16,8 @@ const IntersectingElement = (Component) => {
       },
       ref
     ) => {
-      // Use-in-view restituisce un array con due elementi:
-      // il primo è il riferimento all'elemento, il secondo è un booleano che rappresenta se l'elemento è in vista o no
       const [inViewRef, inView] = useInView({
-        threshold, // Impostiamo la soglia di visibilità
+        threshold,
         triggerOnce: true, // Facciamo in modo che l'effetto di transizione venga visualizzato solo una volta
         ref, // Forniamo il riferimento all'elemento che ci viene passato
       });

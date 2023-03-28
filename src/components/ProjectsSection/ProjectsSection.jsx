@@ -3,6 +3,7 @@ import { Menu } from "antd";
 import { lazy, Suspense } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { projects } from "./projectsData";
+import Intersecting from "../Intersecting";
 
 const ProjectCard = lazy(() => import("./ProjectCard"));
 
@@ -41,7 +42,7 @@ const ProjectsSection = () => {
   );
 
   return (
-    <section id="projects" className="projects lg:px-7 w-full mt-20">
+    <section id="projects" className="projects lg:px-7 w-full mt-10">
       <h2 className="fs-h2 fw-h-bold clr-neutral h2-b-side basis-[100%]">
         Progetti.
       </h2>
@@ -67,7 +68,6 @@ const ProjectsSection = () => {
         {/* Mappatura dei progetti filtrati */}
 
         <motion.div
-          layout
           id="projectsWrapper"
           className="flex flex-wrap gap-3 justify-between"
         >

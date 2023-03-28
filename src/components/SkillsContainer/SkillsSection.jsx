@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Tabs } from "antd";
 import { useMediaQuery } from "react-responsive";
 import Intersecting from "../Intersecting";
@@ -7,9 +7,22 @@ import Intersecting from "../Intersecting";
 import Languages from "./Languages";
 import Framework from "./Framework";
 import Tech from "./Tech";
-
 import Software from "./Software";
 import SoftSkills from "./SoftSkills";
+
+const MemoizedTabs = React.memo(
+  ({ tagContainerStyle, activeKey, handleTabChange, tabItems, isMobile }) => (
+    <Tabs
+      tabPosition={isMobile ? "top" : "left"}
+      tabBarGutter={isMobile ? 10 : undefined}
+      activeKey={activeKey}
+      onChange={handleTabChange}
+      items={tabItems}
+      style={{}}
+      className="w-full clr-neutral ff-normal fs-p"
+    />
+  )
+);
 
 export default function SkillsSection() {
   const [activeKey, setActiveKey] = useState("1");
@@ -45,7 +58,6 @@ export default function SkillsSection() {
           <h6>Framework</h6>
         </>
       ),
-      // ---------------framework---------------
       key: "2",
       children: <Framework tagContainerStyle={tagContainerStyle} />,
     },
@@ -55,7 +67,6 @@ export default function SkillsSection() {
           <h6>Tecnologie</h6>
         </>
       ),
-      // ---------------Tecnologie---------------
       key: "3",
       children: <Tech tagContainerStyle={tagContainerStyle} />,
     },
@@ -83,19 +94,17 @@ export default function SkillsSection() {
     <Intersecting.section
       animationClass="fade-right"
       id="skills"
-      className="skills max-w-max justify-start md:mx-auto flex mt-20 flex-wrap"
+      className="skills max-w-max justify-start flex mt-20 flex-wrap lg:px-7"
     >
       <h2 className="fs-h2 fw-h-bold clr-neutral h2-b-side basis-[100%]">
         Skills.
       </h2>
-      <Tabs
-        tabPosition={isMobile ? "top" : "left"}
-        tabBarGutter={isMobile ? 10 : undefined}
+      <MemoizedTabs
+        tagContainerStyle={tagContainerStyle}
         activeKey={activeKey}
-        onChange={handleTabChange}
-        items={tabItems}
-        style={{}}
-        className="w-full clr-neutral ff-normal fs-p"
+        handleTabChange={handleTabChange}
+        tabItems={tabItems}
+        isMobile={isMobile}
       />
     </Intersecting.section>
   );

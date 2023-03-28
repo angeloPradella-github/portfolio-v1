@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
+import { Tooltip } from "antd";
 
 const ProjectCard = ({
   id,
@@ -29,6 +30,9 @@ const ProjectCard = ({
     <motion.div
       layout
       ref={tiltRef}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       className="project-card w-full lg:w-[48%] drop-shadow-lg"
     >
       <div className="project-link-container">
@@ -42,16 +46,20 @@ const ProjectCard = ({
         {/* external links (mostra solo se link presente) */}
         <article className="flex items-center gap-3">
           {demoLink ? (
-            <a className="project-link" href="">
-              <i className="fa-solid fa-up-right-from-square up-transition"></i>
-            </a>
+            <Tooltip title="Live Demo" placement="top">
+              <a className="project-link" href="">
+                <i className="fa-solid fa-up-right-from-square up-transition"></i>
+              </a>
+            </Tooltip>
           ) : (
             ""
           )}
           {repoLink ? (
-            <a className="project-link" href="">
-              <i className="fa-brands fa-github up-transition"></i>
-            </a>
+            <Tooltip title="Repo. Codice" placement="top">
+              <a className="project-link" href="">
+                <i className="fa-brands fa-github up-transition"></i>
+              </a>
+            </Tooltip>
           ) : (
             ""
           )}

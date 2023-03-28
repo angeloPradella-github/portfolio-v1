@@ -1,9 +1,13 @@
 import Intersecting from "./Intersecting";
 import ProfilePic from "../assets/img_square1.jpg";
+import SkillsSection from "../components/SkillsContainer/SkillsSection";
 
 export default function AboutMeSection() {
   return (
-    <section id="about" className="about-me mx-auto max-w-[900px]">
+    <section
+      id="about"
+      className="about-me mx-auto max-w-[900px] flex flex-col place-items-start"
+    >
       <div className="flex flex-wrap">
         {/* ------------Description colum------------ */}
         <Intersecting.div className="w-full lg:w-2/3 lg:px-7">
@@ -47,10 +51,7 @@ export default function AboutMeSection() {
           />
         </Intersecting.div>
         {/* ------------Extra info row------------ */}
-        <Intersecting.section
-          className="mt-6 w-full lg:px-7 fade-in"
-          threshold={0.5}
-        >
+        <Intersecting.section className="mt-6 w-full lg:px-7" threshold={0.5}>
           <div className="flex flex-wrap gap-3 justify-between extra-info-wrapper px-4 py-2">
             <div>
               <h4>Sede</h4>{" "}
@@ -101,6 +102,7 @@ export default function AboutMeSection() {
           </div>
         </Intersecting.section>
       </div>
+      <SkillsSection />
     </section>
   );
 }
