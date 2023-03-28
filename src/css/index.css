@@ -5,7 +5,6 @@
   flex-direction: column;
   justify-content: center;
 }
-
 .switch-container input[type="checkbox"] {
   height: 0;
   width: 0;
@@ -68,6 +67,10 @@
 
 .switch-container label:active:after {
   width: 23px;
+}
+
+.switch-container input[type="checkbox"]:checked + label {
+  background: var(--clr-accent);
 }
 
 /* ________________about me section_____________ */
