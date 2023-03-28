@@ -19,7 +19,7 @@ const MemoizedTabs = React.memo(
       onChange={handleTabChange}
       items={tabItems}
       style={{}}
-      className="w-full clr-neutral ff-normal fs-p"
+      className="w-full clr-neutral ff-normal fs-p overflow-x-scroll"
     />
   )
 );
@@ -91,10 +91,9 @@ export default function SkillsSection() {
   ];
 
   return (
-    <Intersecting.section
-      animationClass="fade-right"
+    <section
       id="skills"
-      className="skills max-w-max justify-start flex mt-20 flex-wrap lg:px-7"
+      className="skills max-w-max mx-auto justify-start flex mt-20 flex-wrap lg:px-7"
     >
       <h2 className="fs-h2 fw-h-bold clr-neutral h2-b-side basis-[100%]">
         Skills.
@@ -106,6 +105,6 @@ export default function SkillsSection() {
         tabItems={tabItems}
         isMobile={isMobile}
       />
-    </Intersecting.section>
+    </section>
   );
 }

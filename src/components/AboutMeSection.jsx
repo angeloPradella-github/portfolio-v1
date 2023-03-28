@@ -102,7 +102,6 @@ export default function AboutMeSection() {
           </div>
         </Intersecting.section>
       </div>
-      <SkillsSection />
     </section>
   );
 }

@@ -11,6 +11,7 @@ export default function Index() {
     <>
       <HeroSection />
       <AboutMeSection />
+      <SkillsSection />
       <Suspense fallback={<div>Loading...</div>}>
         <ProjectsSection />
       </Suspense>
