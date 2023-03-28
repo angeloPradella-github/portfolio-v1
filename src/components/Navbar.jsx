@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
+import { Tooltip } from "antd";
+
 import "./CustomButtons.css";
 
 export default function Navbar() {
@@ -51,9 +53,15 @@ export default function Navbar() {
     >
       <div className="flex justify-between basis-[100%]">
         {/* Curriculum Button */}
-        <a className="btn-sm lg:btn btn-full lg:btn-empty fw-b-bold" href="">
-          Curriculum
-        </a>
+        <Tooltip title="Vedi CV" placement="bottom">
+          <a
+            className="btn-sm lg:btn btn-full lg:btn-empty fw-b-bold"
+            href="https://drive.google.com/file/d/1-ou0ULzuRT-2NYwDZU733-PTc87l6tZk/view?usp=share_link"
+            target="_blank"
+          >
+            Curriculum
+          </a>
+        </Tooltip>
         {/* Hamburger Menu */}
         <i
           className="fa-solid fa-bars text-2xl clr-neutral cursor-pointer lg:hidden"

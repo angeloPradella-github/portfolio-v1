@@ -3,7 +3,6 @@ import { Menu } from "antd";
 import { lazy, Suspense } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { projects } from "./projectsData";
-import Intersecting from "../Intersecting";
 
 const ProjectCard = lazy(() => import("./ProjectCard"));
 
@@ -59,9 +58,9 @@ const ProjectsSection = () => {
         >
           <Menu.Item key="all">Tutti</Menu.Item>
           <Menu.Item key="webapp">Web App</Menu.Item>
-          <Menu.Item key="frontend">Front</Menu.Item>
+          <Menu.Item key="frontend">Frontend</Menu.Item>
           <Menu.Item key="test" className="margin-0">
-            Test
+            Prototipi
           </Menu.Item>
         </Menu>
 

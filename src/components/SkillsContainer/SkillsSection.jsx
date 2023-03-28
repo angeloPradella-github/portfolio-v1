@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Tabs } from "antd";
 import { useMediaQuery } from "react-responsive";
-import Intersecting from "../Intersecting";
 
 // Sezioni
 import Languages from "./Languages";

@@ -96,7 +96,11 @@ export default function AboutMeSection() {
                 data-direction="top"
               >
                 Scarica PDF{" "}
-                <i className="cursor-pointer up-transition fa-solid fa-file-arrow-down"></i>
+                <a
+                  href="https://drive.google.com/file/d/1-ou0ULzuRT-2NYwDZU733-PTc87l6tZk/view?usp=share_link"
+                  target="_blank"
+                  className="cursor-pointer up-transition fa-solid fa-file-arrow-down"
+                ></a>
               </p>
             </div>
           </div>
