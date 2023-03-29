@@ -102,9 +102,9 @@ const ProjectsSection = () => {
 
         {/* Sottotitolo descrittivo della sezione */}
         <article className="mx-auto max-w-[600px] mb-5">
-          <h3 className="text-center my-2 md:my-0 fw-b-thin">
+          <h6 className="md:text-center my-2 md:my-0 fw-b-thin text-justify clr-neutral">
             {contentMap[currentMenu]}
-          </h3>
+          </h6>
         </article>
 
         {/* Mappatura dei progetti filtrati */}
