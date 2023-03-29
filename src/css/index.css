@@ -96,6 +96,10 @@
   opacity: 50%;
 }
 
+.about-me {
+  font-weight: 300 !important;
+}
+
 /* ---------------ANT TAB SKILLS SECTION--------------- */
 /* Cambia il colore della barra di progressione a rosso */
 #root .ant-tabs-ink-bar {
@@ -325,4 +329,8 @@
 }
 .footer i {
   font-size: 12px;
+}
+
+.contact p {
+  font-size: 18px;
 }

@@ -1,6 +1,6 @@
 import Intersecting from "./Intersecting";
 import ProfilePic from "../assets/img_square1.jpg";
-import SkillsSection from "../components/SkillsContainer/SkillsSection";
+import { Tooltip } from "antd";
 
 export default function AboutMeSection() {
   return (
@@ -55,7 +55,11 @@ export default function AboutMeSection() {
           <div className="flex flex-wrap gap-3 justify-between extra-info-wrapper px-4 py-2">
             <div>
               <h4>Sede</h4>{" "}
-              <p className="text-base clr-neutral fw-b-bold">Trieste, Italia</p>
+              <Tooltip title="Disponibile al Trasferimento">
+                <p className="text-base clr-neutral fw-b-bold">
+                  Trieste, Italia
+                </p>
+              </Tooltip>
             </div>
 
             <div>
@@ -71,37 +75,32 @@ export default function AboutMeSection() {
 
             <div>
               <h4>Linkedin</h4>{" "}
-              <p
-                className="text-base clr-neutral fw-b-bold flex gap-2 c-tooltip relative"
-                aria-label="Nuovi Progetti, Certificati ..."
-                data-direction="top"
-              >
-                {/* <i className="flag-icon flag-icon-it"></i>
+              <Tooltip title="Nuovi Progetti, Certificati...">
+                <p className="text-base clr-neutral fw-b-bold flex gap-2">
+                  {/* <i className="flag-icon flag-icon-it"></i>
                 <i className="flag-icon flag-icon-gb"></i> */}
-                Le mie attività
-                <a
-                  href="https://www.linkedin.com/in/angelo-giovanni-pradella-fullstack-web-developer/"
-                  target="_blank"
-                  className="up-transition cursor-pointer fa-solid fa-arrow-up-right-from-square text-sm"
-                ></a>
-              </p>
+                  Le mie attività
+                  <a
+                    href="https://www.linkedin.com/in/angelo-giovanni-pradella-fullstack-web-developer/"
+                    target="_blank"
+                    className="up-transition cursor-pointer fa-solid fa-arrow-up-right-from-square text-sm"
+                  ></a>
+                </p>
+              </Tooltip>
             </div>
 
             <div>
               <h4>Curriculum</h4>{" "}
-              <p
-                className="text-base clr-neutral fw-b-bold flex gap-2
-              c-tooltip relative"
-                aria-label="Formazione, Istruzione ..."
-                data-direction="top"
-              >
-                Scarica PDF{" "}
-                <a
-                  href="https://drive.google.com/file/d/1-ou0ULzuRT-2NYwDZU733-PTc87l6tZk/view?usp=share_link"
-                  target="_blank"
-                  className="cursor-pointer up-transition fa-solid fa-file-arrow-down"
-                ></a>
-              </p>
+              <Tooltip title="Formazione, Istruzione...">
+                <p className="text-base clr-neutral fw-b-bold flex gap-2">
+                  Online PDF{" "}
+                  <a
+                    href="https://drive.google.com/file/d/1-ou0ULzuRT-2NYwDZU733-PTc87l6tZk/view?usp=share_link"
+                    target="_blank"
+                    className="cursor-pointer up-transition fa-solid fa-file-arrow-down"
+                  ></a>
+                </p>
+              </Tooltip>
             </div>
           </div>
         </Intersecting.section>

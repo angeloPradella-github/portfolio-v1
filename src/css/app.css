@@ -150,12 +150,13 @@
   background-color: var(--clr-neutral-opaque);
   content: "";
   display: inline-block;
-  height: 1px;
+  height: 0.8px;
   position: relative;
   vertical-align: middle;
   width: 100%;
   left: 0.5em;
-  margin-right: -50%;
+  margin-right: -80%;
+  font-weight: 300 !important;
 }
 /* ------------------ */
 
@@ -411,7 +412,7 @@ button {
   }
 
   /* ____________________________TOOLTIPS__________________________ */
-  .c-tooltip::before,
+  /* .c-tooltip::before,
   .c-tooltip::after {
     display: block;
     position: absolute;
@@ -433,7 +434,7 @@ button {
   }
 
   /* Stili specifici per la freccia e il contenuto del tooltip */
-  .c-tooltip::before {
+  /* .c-tooltip::before {
     content: "";
     border: solid 5px transparent;
   }
@@ -447,10 +448,10 @@ button {
     background-color: var(--clr-neutral);
     width: max-content;
     line-height: normal;
-  }
+  } */
 
   /* Stili per la posizione della freccia e del contenuto del tooltip */
-  .c-tooltip[data-direction="top"]::before {
+  /* .c-tooltip[data-direction="top"]::before {
     bottom: calc(100% - 7px);
     border-top-color: currentColor;
   }
@@ -497,7 +498,7 @@ button {
   }
 
   /* Stili per il passaggio del mouse */
-  .c-tooltip:hover::before,
+  /* .c-tooltip:hover::before,
   .c-tooltip:hover::after {
     opacity: 1;
   }
@@ -517,5 +518,5 @@ button {
   .c-tooltip[data-direction="right"]:hover::before,
   .c-tooltip[data-direction="right"]:hover::after {
     transform: translateY(-50%) translateX(10px);
-  }
+  }  */
 }

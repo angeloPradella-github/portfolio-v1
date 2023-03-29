@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Tooltip } from "antd";
 
 const themeStyles = {
   normal: {
@@ -41,11 +42,7 @@ export default function SwitchContainer() {
 
   return (
     <div className="switch-container flex flex-col clr-neutral justify-end gap-8">
-      <div
-        className="c-tooltip relative"
-        aria-label="Cambia Tema"
-        data-direction="right"
-      >
+      <Tooltip title="Tema" placement="right">
         <input
           onChange={handleToggle}
           type="checkbox"
@@ -53,7 +50,7 @@ export default function SwitchContainer() {
           checked={currentTheme !== "dark"} //Per far partire lo switch nella modaltà corrente
         />
         <label htmlFor="switch">Toggle</label>
-      </div>
+      </Tooltip>
       <div className="line"></div>
     </div>
   );
