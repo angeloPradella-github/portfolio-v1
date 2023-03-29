@@ -15,8 +15,12 @@ export default function ContactSection() {
           nell'ambito dello sviluppo Web, inclusi progetti{" "}
           <span className="clr-accent">FullStack</span>.
         </p>
-        <a href="" className="btn btn-empty up-transition mt-4">
-          E-Mail
+        <a
+          href="https://mail.google.com/mail/?view=cm&amp;to=angelogpradella@gmail.com"
+          target="_blank"
+          className="btn btn-empty up-transition mt-4"
+        >
+          Inviami una Mail
         </a>
       </div>
     </section>
