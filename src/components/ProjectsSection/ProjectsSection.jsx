@@ -14,27 +14,31 @@ const ProjectsSection = () => {
   const contentMap = {
     all: (
       <>
-        In questa sezione sono presenti tutti i progetti, inclusi quelli di Web
-        App, Frontend e Prototipi. Esplorando il portfolio, si potranno
-        apprezzare le competenze e le tecnologie utilizzate, come React,
-        Next.js, PHP e SQL.
+        In questa sezione sono presenti i miei migliori progetti{" "}
+        <span className="clr-accent">accuratamente realizzati</span>, di
+        complessità e impatto vari, evidenziando la familiarità con diverse
+        tecnologie e linguaggi di programmazione.
       </>
     ),
     webapp: (
       <>
-        La sezione Web App comprende applicazioni client-server basate su design
-        pattern MVC, come piattaforme di gestione delle attività e sistemi di
-        prenotazione. Le tecnologie e i linguaggi utilizzati includono React,
-        PHP, SQL, AJAX, Axios e MySQL.
+        La raccolta include applicazioni Web{" "}
+        <span className="clr-accent">client-server</span>, sviluppate seguendo
+        diversi pattern architetturali come l'
+        <span className="clr-accent">MVC</span> o implementando soluzioni basate
+        su <span className="clr-accent">API</span> e{" "}
+        <span className="clr-accent">Web Service </span>per la comunicazione fra
+        le componenti. Tecnologie e linguaggi utilizzati: PHP, Laravel, React,
+        Node.js e altri.
       </>
     ),
     frontend: (
       <>
-        Raccolta progetti di solo Frontend applicati nella realizzazione di siti
-        web responsivi e performanti. Alcuni esempi includono siti sole landing
-        page oppre siti web interi come il mio portfolio. <br /> Le soluzioni
-        adottate comprendono l'utilizzo di framework e librerie come Bootstrap,
-        Tailwind, React ecc.
+        I progetti di Frontend qui presenti riguardano la realizzazione di siti
+        Web <span className="clr-accent">responsivi</span> e performanti, curati
+        nei <span className="clr-accent">minimi dettagli</span>, dalle landing
+        page ai siti completi. Le soluzioni adottate includono l'uso di
+        framework e librerie come Bootstrap, Tailwind, React, Antd e altri.
       </>
     ),
     test: (
