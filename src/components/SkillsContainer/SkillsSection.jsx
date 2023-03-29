@@ -37,7 +37,6 @@ export default function SkillsSection() {
     gap: "5px",
     justifyContent: "flex-start",
     alignItems: "center",
-    paddingLeft: "10px",
     marginTop: "5px",
   };
 

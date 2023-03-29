@@ -92,7 +92,7 @@ const ProjectsSection = () => {
           onClick={handleClick}
           selectedKeys={[currentMenu]}
           mode="horizontal"
-          className="px-2 py-2 overflow-x-scroll flex justify-center"
+          className="px-2 py-2 overflow-x-scroll flex justify-between md:justify-center"
           style={{
             background: "none",
             borderBottom: "none",
