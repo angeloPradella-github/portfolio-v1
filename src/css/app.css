@@ -138,7 +138,7 @@
 }
 
 .fs-p {
-  font-size: var(--fs-p) !important;
+  font-size: var(--fs-p);
 }
 
 .h2-b-side {
@@ -203,7 +203,6 @@ h6 {
 }
 
 p {
-  font-size: var(--fs-p);
   font-weight: var(--fw-body-normal);
   color: var(--clr-neutral);
   line-height: normal;
@@ -393,6 +392,9 @@ button {
 @media screen and (max-width: 768px) {
   .app-layout {
     --main-padding: 40px;
+  }
+  .project-description {
+    font-size: 18px;
   }
 }
 

@@ -17,7 +17,9 @@ const ProjectsSection = () => {
         In questa sezione sono presenti i miei migliori progetti{" "}
         <span className="clr-accent">accuratamente realizzati</span>, di
         complessità e impatto vari, evidenziando la familiarità con diverse
-        tecnologie e linguaggi di programmazione.
+        tecnologie e linguaggi di programmazione, ed anche la capacità di
+        lavorare in
+        <span className="clr-accent"> team</span>.
       </>
     ),
     webapp: (
@@ -106,7 +108,7 @@ const ProjectsSection = () => {
 
         {/* Sottotitolo descrittivo della sezione */}
         <article className="mx-auto max-w-[600px] mb-5">
-          <h6 className="md:text-center my-2 md:my-0 fw-b-thin text-justify clr-neutral">
+          <h6 className="project-description md:text-center my-2 md:my-0 fw-b-thin text-justify clr-neutral">
             {contentMap[currentMenu]}
           </h6>
         </article>

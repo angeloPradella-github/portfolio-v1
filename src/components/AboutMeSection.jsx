@@ -6,7 +6,7 @@ export default function AboutMeSection() {
   return (
     <section
       id="about"
-      className="about-me mx-auto max-w-[900px] flex flex-col place-items-start"
+      className="about-me mx-auto max-w-[900px] flex flex-col place-items-start text-lg md:text-xl"
     >
       <div className="flex flex-wrap">
         {/* ------------Description colum------------ */}
