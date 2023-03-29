@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Socials from "./components/Socials";
 import SwitchContainer from "./components/SwitchContainer";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Zoom from "./components/Zoom";
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
         <SwitchContainer />
         <Socials />
       </main>
-      <footer className="h-screen"></footer>
+      <Footer />
     </>
   );
 }

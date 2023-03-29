@@ -318,3 +318,9 @@
   background-color: #27c93f;
   border: 1px solid #11460530;
 }
+
+/* --------------FOOTER-------------- */
+.footer {
+  background-color: var(--clr-light);
+  font-weight: 300;
+}
