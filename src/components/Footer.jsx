@@ -4,7 +4,10 @@ export default function Footer() {
       <div className="footer clr-neutral rounded-lg mx-auto md:shadow-lg max-w-[900px]">
         <div className=" md:p-6 p-4 flex flex-col md:flex-row  items-center md:justify-between justify-center ">
           <span className="text-sm sm:text-center">
-            2023 © Made with <span className="clr-accent">React </span>
+            2023 © Made with <span className="clr-accent">React </span> &{" "}
+            <span className="clr-accent">
+              <i className="fa-regular fa-heart"></i>
+            </span>{" "}
             by Angelo G. Pradella
           </span>
 

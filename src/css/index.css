@@ -321,6 +321,8 @@
 
 /* --------------FOOTER-------------- */
 .footer {
-  background-color: var(--clr-light);
   font-weight: 300;
+}
+.footer i {
+  font-size: 12px;
 }
