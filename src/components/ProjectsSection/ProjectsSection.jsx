@@ -11,6 +11,41 @@ const ProjectsSection = () => {
   const [displayedProjects, setDisplayedProjects] = useState([]);
   const [projectsToShow, setProjectsToShow] = useState(4);
 
+  const contentMap = {
+    all: (
+      <div>
+        In questa sezione sono presenti tutti i progetti, inclusi quelli di Web
+        App, Frontend e Prototipi. Esplorando il portfolio, si potranno
+        apprezzare le competenze e le tecnologie utilizzate, come React,
+        Next.js, PHP e SQL.
+      </div>
+    ),
+    webapp: (
+      <div>
+        La sezione Web App comprende applicazioni client-server basate su design
+        pattern MVC, come piattaforme di gestione delle attività e sistemi di
+        prenotazione. Le tecnologie e i linguaggi utilizzati includono React,
+        PHP, SQL, AJAX, Axios e MySQL.
+      </div>
+    ),
+    frontend: (
+      <div>
+        Raccolta progetti di solo Frontend applicati nella realizzazione di siti
+        web responsivi e performanti. Alcuni esempi includono siti sole landing
+        page oppre siti web interi come il mio portfolio. <br /> Le soluzioni
+        adottate comprendono l'utilizzo di framework e librerie come Bootstrap,
+        Tailwind, React ecc.
+      </div>
+    ),
+    test: (
+      <div>
+        La categoria dei prototipi include progetti sperimentali che esplorano
+        nuove tecnologie e concetti di design. Gli esperimenti riguardano l'uso
+        di API, CMS, l'implementazione di interfacce utente innovative ecc.
+      </div>
+    ),
+  };
+
   const handleClick = useCallback((e) => {
     setCurrentMenu(e.key);
     setProjectsToShow(4); // Resetta il conteggio dei progetti da mostrare quando si cambia la sezione
@@ -63,6 +98,13 @@ const ProjectsSection = () => {
             Prototipi
           </Menu.Item>
         </Menu>
+
+        {/* Sottotitolo descrittivo della sezione */}
+        <article className="mx-auto max-w-[600px] mb-5">
+          <h3 className="text-center my-2 md:my-0">
+            {contentMap[currentMenu]}
+          </h3>
+        </article>
 
         {/* Mappatura dei progetti filtrati */}
 
