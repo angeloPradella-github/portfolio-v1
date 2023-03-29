@@ -10,10 +10,13 @@ export const projects = [
         imgPath:
             "https://images.unsplash.com/photo-1567581634552-3ed9154ae627?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1475&q=80",
         repoLink: "",
-        demoLink: "",
+        demoLink: "ciao",
+        videoLink: "ciao"
+
     },
     {
         id: 2,
+        videoLink: "",
         title: "Progetto 2",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem agaga suua ayta ayay",
@@ -24,6 +27,7 @@ export const projects = [
             "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1115&q=80",
         repoLink: "https://github.com/example/progetto2",
         demoLink: "",
+        videoLink: ""
     },
     {
         id: 3,
@@ -36,6 +40,7 @@ export const projects = [
             "https://colibriwp.com/blog/wp-content/uploads/2019/11/colibri-business.png",
         repoLink: "https://github.com/example/progetto3",
         demoLink: "https://example.com/progetto3",
+        videoLink: "miao"
     },
     {
         id: 4,
@@ -48,6 +53,7 @@ export const projects = [
             "https://assets.justinmind.com/wp-content/uploads/2020/10/hero-image-illustration-airbnb.png",
         repoLink: "",
         demoLink: "https://example.com/progetto4",
+        videoLink: ""
     },
     {
         id: 5,
@@ -60,6 +66,7 @@ export const projects = [
             "https://peterdraw.studio/wp-content/uploads/2022/01/TixCenter-Ticket-Booking-Website-Hero-Section.png",
         repoLink: "",
         demoLink: "https://example.com/progetto4",
+        videoLink: ""
     },
     {
         id: 6,
@@ -72,6 +79,7 @@ export const projects = [
             "https://peterdraw.studio/wp-content/uploads/2022/01/TixCenter-Ticket-Booking-Website-Hero-Section.png",
         repoLink: "",
         demoLink: "https://example.com/progetto4",
+        videoLink: ""
     },
     {
         id: 7,
@@ -84,6 +92,7 @@ export const projects = [
             "https://peterdraw.studio/wp-content/uploads/2022/01/TixCenter-Ticket-Booking-Website-Hero-Section.png",
         repoLink: "",
         demoLink: "https://example.com/progetto4",
+        videoLink: ""
     },
     {
         id: 8,
@@ -96,6 +105,7 @@ export const projects = [
             "https://peterdraw.studio/wp-content/uploads/2022/01/TixCenter-Ticket-Booking-Website-Hero-Section.png",
         repoLink: "",
         demoLink: "https://example.com/progetto4",
+        videoLink: ""
     },
     {
         id: 9,
@@ -108,5 +118,6 @@ export const projects = [
             "https://peterdraw.studio/wp-content/uploads/2022/01/TixCenter-Ticket-Booking-Website-Hero-Section.png",
         repoLink: "",
         demoLink: "https://example.com/progetto4",
+        videoLink: ""
     },
 ];

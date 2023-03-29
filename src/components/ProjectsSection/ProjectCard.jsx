@@ -11,6 +11,7 @@ const ProjectCard = ({
   imgPath,
   repoLink,
   demoLink,
+  videoLink,
 }) => {
   const tiltRef = useRef(null);
   const options = {
@@ -45,6 +46,15 @@ const ProjectCard = ({
 
         {/* external links (mostra solo se link presente) */}
         <article className="flex items-center gap-3">
+          {videoLink ? (
+            <Tooltip title="Video Demo" placement="top">
+              <a className="project-link" href="">
+                <i className="fa-solid fa-play"></i>
+              </a>
+            </Tooltip>
+          ) : (
+            ""
+          )}
           {demoLink ? (
             <Tooltip title="Live Demo" placement="top">
               <a className="project-link" href="">

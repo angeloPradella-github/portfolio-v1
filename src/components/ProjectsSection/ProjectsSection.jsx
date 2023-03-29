@@ -129,6 +129,7 @@ const ProjectsSection = () => {
                   imgPath={project.imgPath}
                   repoLink={project.repoLink}
                   demoLink={project.demoLink}
+                  videoLink={project.videoLink}
                 />
               ))}
             </Suspense>
