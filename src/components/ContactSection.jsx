@@ -11,7 +11,7 @@ export default function ContactSection() {
         <p className="text-center fw-b-thin">
           Sono attualmente alla ricerca di nuove opportunità di lavoro come
           sviluppatore <span className="clr-accent">Frontend</span>. Ma sarei
-          comuqnue lieto di discutere qualsiasi opportunità interessante
+          comunque lieto di discutere qualsiasi opportunità interessante
           nell'ambito dello sviluppo Web, inclusi progetti{" "}
           <span className="clr-accent">FullStack</span>.
         </p>

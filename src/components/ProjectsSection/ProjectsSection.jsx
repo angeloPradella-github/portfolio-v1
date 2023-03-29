@@ -13,36 +13,37 @@ const ProjectsSection = () => {
 
   const contentMap = {
     all: (
-      <div>
+      <>
         In questa sezione sono presenti tutti i progetti, inclusi quelli di Web
         App, Frontend e Prototipi. Esplorando il portfolio, si potranno
         apprezzare le competenze e le tecnologie utilizzate, come React,
         Next.js, PHP e SQL.
-      </div>
+      </>
     ),
     webapp: (
-      <div>
+      <>
         La sezione Web App comprende applicazioni client-server basate su design
         pattern MVC, come piattaforme di gestione delle attività e sistemi di
         prenotazione. Le tecnologie e i linguaggi utilizzati includono React,
         PHP, SQL, AJAX, Axios e MySQL.
-      </div>
+      </>
     ),
     frontend: (
-      <div>
+      <>
         Raccolta progetti di solo Frontend applicati nella realizzazione di siti
         web responsivi e performanti. Alcuni esempi includono siti sole landing
         page oppre siti web interi come il mio portfolio. <br /> Le soluzioni
         adottate comprendono l'utilizzo di framework e librerie come Bootstrap,
         Tailwind, React ecc.
-      </div>
+      </>
     ),
     test: (
-      <div>
-        La categoria dei prototipi include progetti sperimentali che esplorano
-        nuove tecnologie e concetti di design. Gli esperimenti riguardano l'uso
-        di API, CMS, l'implementazione di interfacce utente innovative ecc.
-      </div>
+      <>
+        La categoria dei prototipi include progetti sperimentali che esplorano{" "}
+        <span className="clr-accent">nuove tecnologie</span> e concetti di
+        design. Gli esperimenti riguardano l'uso di API, CMS, l'implementazione
+        di interfacce utente innovative ecc.
+      </>
     ),
   };
 
@@ -101,7 +102,7 @@ const ProjectsSection = () => {
 
         {/* Sottotitolo descrittivo della sezione */}
         <article className="mx-auto max-w-[600px] mb-5">
-          <h3 className="text-center my-2 md:my-0">
+          <h3 className="text-center my-2 md:my-0 fw-b-thin">
             {contentMap[currentMenu]}
           </h3>
         </article>
