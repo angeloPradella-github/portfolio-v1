@@ -399,6 +399,9 @@ button {
   .project-description {
     font-size: 18px;
   }
+  .skills {
+    margin-bottom: 1rem !important;
+  }
 }
 
 @media screen and (min-width: 768px) {
