@@ -50,6 +50,9 @@
 }
 
 /* ---------UTILS--------- */
+.fs-med {
+  font-size: 20px;
+}
 .ant-tag {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

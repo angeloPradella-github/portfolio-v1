@@ -37,7 +37,7 @@ export default function HeroSection() {
           Angelo G. Pradella
         </motion.h1>
         <motion.p
-          className="max-w-lg text-justify md:text-left"
+          className="max-w-lg text-justify md:text-left fs-med"
           variants={item}
         >
           Perito informatico con competenze
