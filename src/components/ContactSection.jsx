@@ -7,7 +7,7 @@ export default function ContactSection() {
       <h2 className="fs-h2 fw-h-bold text-center clr-neutral">
         Entriamo in Contatto.
       </h2>
-      <div className="container flex flex-col items-center px-4">
+      <div className="container flex flex-col items-center md:px-4">
         <p className="text-justify md:text-center fw-b-thin">
           Sono attualmente alla ricerca di nuove opportunità di lavoro come
           sviluppatore <span className="clr-accent">Frontend</span>. Ma sarei

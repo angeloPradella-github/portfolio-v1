@@ -147,7 +147,7 @@ const ProjectsSection = () => {
         )}
         {projectsToShow > 4 && (
           <button className="up-transition" onClick={handleShowLessClick}>
-            Mostra meno <i className="fa-regular fa-eye-slash"></i>
+            Mostra meno <i className="align-middle fa-regular fa-eye-slash"></i>
           </button>
         )}
       </div>
