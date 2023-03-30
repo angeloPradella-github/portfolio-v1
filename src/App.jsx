@@ -6,7 +6,7 @@ import Index from "./pages/Index";
 // ----------COMPONENTS-------------
 import Socials from "./components/Socials";
 import SwitchContainer from "./components/SwitchContainer";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer";
 import Zoom from "./components/Zoom";
 

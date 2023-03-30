@@ -406,6 +406,12 @@ button {
   .skills {
     margin-bottom: 1rem !important;
   }
+  #contacs,
+  #about,
+  #skills,
+  #projects:target {
+    scroll-margin-top: 240px;
+  }
 }
 
 @media screen and (min-width: 768px) {
