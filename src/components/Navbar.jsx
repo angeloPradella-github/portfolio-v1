@@ -1,13 +1,61 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { useMediaQuery } from "react-responsive";
 import { Tooltip } from "antd";
-
 import "./CustomButtons.css";
+
+const HamburgerMenu = ({ onClick }) => (
+  <i
+    className="fa-solid fa-bars text-2xl clr-neutral cursor-pointer lg:hidden"
+    onClick={onClick}
+  ></i>
+);
+
+const NavList = ({ menuOpen }) => (
+  <div
+    id="navList"
+    className={`flex items-center flex-col lg:flex-row gap-2 lg:gap-6 items-start lg:items-center w-full lg:w-auto pb-3 lg:pb-0 ${
+      menuOpen ? "" : "hidden"
+    }`}
+  >
+    <a
+      className="py-2 border-b-acc lg:border-none w-full text-center"
+      href="#about"
+    >
+      <li className="list-none drop-shadow-[0_2px_6px_rgba(0,0,0,0.2)]  lg:underline-hover fw-b-bold">
+        Profilo
+      </li>
+    </a>
+    <a
+      className="py-2 border-b-acc lg:border-none w-full text-center"
+      href="#skills"
+    >
+      <li className="list-none drop-shadow-[0_2px_6px_rgba(0,0,0,0.2)] lg:underline-hover fw-b-bold">
+        Competenze
+      </li>
+    </a>
+    <a
+      className="py-2 border-b-acc lg:border-none w-full text-center"
+      href="#projects"
+    >
+      <li className="list-none drop-shadow-[0_2px_6px_rgba(0,0,0,0.2)]  lg:underline-hover fw-b-bold">
+        Progetti
+      </li>
+    </a>
+    <a
+      className="py-2 border-b-acc lg:border-none w-full text-center"
+      href="#contacts"
+    >
+      <li className="list-none drop-shadow-[0_2px_6px_rgba(0,0,0,0.2)]  lg:underline-hover fw-b-bold">
+        Contattami
+      </li>
+    </a>
+  </div>
+);
 
 export default function Navbar() {
   const prevScrollPosRef = useRef(0);
   const [navbarState, setNavbarState] = useState({ visible: true, bg: false });
-  const [menuOpen, setMenuOpen] = useState(false); // Aggiungi questo stato
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const isMdOrLarger = useMediaQuery({ minWidth: 1023 });
 
@@ -19,14 +67,7 @@ export default function Navbar() {
     }
   }, [isMdOrLarger]);
 
-  useEffect(() => {
-    if (isMdOrLarger) {
-      window.addEventListener("scroll", handleScroll);
-    }
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [isMdOrLarger]);
-
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     const currentScrollPos = window.pageYOffset;
     const shouldBeVisible =
       prevScrollPosRef.current > currentScrollPos || currentScrollPos < 10;
@@ -34,10 +75,17 @@ export default function Navbar() {
 
     setNavbarState({ visible: shouldBeVisible, bg: shouldBeBg });
     prevScrollPosRef.current = currentScrollPos;
-  };
+  }, []);
+
+  useEffect(() => {
+    if (isMdOrLarger) {
+      window.addEventListener("scroll", handleScroll);
+    }
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isMdOrLarger, handleScroll]);
 
   const handleMenuClick = () => {
-    setMenuOpen(!menuOpen); // Aggiorna lo stato del menu
+    setMenuOpen(!menuOpen);
   };
 
   return (
@@ -63,51 +111,10 @@ export default function Navbar() {
           </a>
         </Tooltip>
         {/* Hamburger Menu */}
-        <i
-          className="fa-solid fa-bars text-2xl clr-neutral cursor-pointer lg:hidden"
-          onClick={handleMenuClick}
-        ></i>
+        <HamburgerMenu onClick={handleMenuClick} />
       </div>
       {/* Navlist */}
-      <div
-        id="navList"
-        className={`flex items-center flex-col lg:flex-row gap-2 lg:gap-6 items-start lg:items-center w-full lg:w-auto pb-3 lg:pb-0 ${
-          menuOpen ? "" : "hidden"
-        }`}
-      >
-        <a
-          className="py-2 border-b-acc lg:border-none w-full text-center"
-          href="#about"
-        >
-          <li className="list-none drop-shadow-[0_2px_6px_rgba(0,0,0,0.2)]  lg:underline-hover fw-b-bold">
-            Profilo
-          </li>
-        </a>
-        <a
-          className="py-2 border-b-acc lg:border-none w-full text-center"
-          href="#skills"
-        >
-          <li className="list-none drop-shadow-[0_2px_6px_rgba(0,0,0,0.2)] lg:underline-hover fw-b-bold">
-            Competenze
-          </li>
-        </a>
-        <a
-          className="py-2 border-b-acc lg:border-none w-full text-center"
-          href="#projects"
-        >
-          <li className="list-none drop-shadow-[0_2px_6px_rgba(0,0,0,0.2)]  lg:underline-hover fw-b-bold">
-            Progetti
-          </li>
-        </a>
-        <a
-          className="py-2 border-b-acc lg:border-none w-full text-center"
-          href="#contacts"
-        >
-          <li className="list-none drop-shadow-[0_2px_6px_rgba(0,0,0,0.2)]  lg:underline-hover fw-b-bold">
-            Contattami
-          </li>
-        </a>
-      </div>
+      <NavList menuOpen={menuOpen} />
     </nav>
   );
 }

@@ -17,7 +17,6 @@ const MemoizedTabs = React.memo(
       activeKey={activeKey}
       onChange={handleTabChange}
       items={tabItems}
-      style={{}}
       className="w-full clr-neutral ff-normal fs-p overflow-x-scroll"
     />
   )
