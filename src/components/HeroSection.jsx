@@ -55,7 +55,7 @@ export default function HeroSection() {
       >
         <motion.a
           className="max-w-[154px] btn-big ff-accent btn-empty up-transition"
-          href="#"
+          href="#contacts"
           variants={item}
         >
           CONTATTAMI

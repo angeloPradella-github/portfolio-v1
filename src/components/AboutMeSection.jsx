@@ -1,6 +1,10 @@
 import Intersecting from "./Intersecting";
-import ProfilePic from "../assets/img_square1.jpg";
 import { Tooltip } from "antd";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
+import ProfilePic from "../assets/images/Img_square1.jpg";
+import BlurredProfilePic from "../assets/images/Img_square1-compressed.jpg";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 export default function AboutMeSection() {
   return (
@@ -44,10 +48,12 @@ export default function AboutMeSection() {
           threshold={0.7}
           className="w-full lg:w-1/3 mt-5 lg:mt-0 lg:p-7 flex justify-center"
         >
-          <img
+          <LazyLoadImage
             className="profile-pic"
             src={ProfilePic}
             alt="Immagine Profilo"
+            effect="blur"
+            placeholderSrc={BlurredProfilePic}
           />
         </Intersecting.div>
         {/* ------------Extra info row------------ */}
@@ -56,9 +62,9 @@ export default function AboutMeSection() {
             <div>
               <h4>Sede</h4>{" "}
               <Tooltip title="Disponibile al Trasferimento">
-                <p className="text-base clr-neutral fw-b-bold">
+                <address className="text-base clr-neutral fw-b-bold">
                   Trieste, Italia
-                </p>
+                </address>
               </Tooltip>
             </div>
 
@@ -83,6 +89,7 @@ export default function AboutMeSection() {
                   <a
                     href="https://www.linkedin.com/in/angelo-giovanni-pradella-fullstack-web-developer/"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="up-transition cursor-pointer fa-solid fa-arrow-up-right-from-square text-sm"
                   ></a>
                 </p>
@@ -97,6 +104,7 @@ export default function AboutMeSection() {
                   <a
                     href="https://drive.google.com/file/d/1-ou0ULzuRT-2NYwDZU733-PTc87l6tZk/view?usp=share_link"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="cursor-pointer up-transition fa-solid fa-file-arrow-down"
                   ></a>
                 </p>
