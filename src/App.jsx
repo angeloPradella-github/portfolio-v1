@@ -10,9 +10,15 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Zoom from "./components/Zoom";
 
+import { Helmet } from "react-helmet";
+import personSchemaLD from "./Meta/personSchemaLD.js";
+
 function App() {
   return (
     <>
+      <Helmet>
+        <script type="application/ld+json">{personSchemaLD}</script>
+      </Helmet>
       <Zoom zoom="125%" />
       <Navbar />
       <main className="app-layout">

@@ -23,7 +23,7 @@ const item = {
 
 export default function HeroSection() {
   return (
-    <section className="hero-section mx-auto">
+    <header className="hero-section mx-auto">
       <motion.div
         className="text-container"
         variants={container}
@@ -68,6 +68,6 @@ export default function HeroSection() {
           PROGETTI
         </motion.a>
       </motion.div>
-    </section>
+    </header>
   );
 }
