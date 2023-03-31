@@ -43,14 +43,14 @@ const ProjectsSection = () => {
         framework e librerie come Bootstrap, Tailwind, React, Antd e altri.
       </>
     ),
-    test: (
-      <>
-        La categoria dei prototipi include progetti sperimentali che esplorano{" "}
-        <span className="clr-accent">nuove tecnologie</span> e concetti di
-        design. Gli esperimenti riguardano l'uso di API, CMS, l'implementazione
-        di interfacce utente innovative ecc.
-      </>
-    ),
+    // test: (
+    //   <>
+    //     La categoria dei prototipi include progetti sperimentali che esplorano{" "}
+    //     <span className="clr-accent">nuove tecnologie</span> e concetti di
+    //     design. Gli esperimenti riguardano l'uso di API, CMS, l'implementazione
+    //     di interfacce utente innovative ecc.
+    //   </>
+    // ),
   };
 
   const handleClick = useCallback((e) => {
@@ -85,7 +85,7 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="projects lg:px-7 w-full mt-10">
       <h2 className="fs-h2 fw-h-bold clr-neutral h2-b-side basis-[100%]">
-        Progetti.
+        Progetti. <span className="text-sm fw-b-thin">(In allestimento)</span>
       </h2>
       <div className="">
         <Menu
@@ -101,9 +101,9 @@ const ProjectsSection = () => {
           <Menu.Item key="all">Tutti</Menu.Item>
           <Menu.Item key="webapp">Web App</Menu.Item>
           <Menu.Item key="frontend">Frontend</Menu.Item>
-          <Menu.Item key="test" className="margin-0">
+          {/* <Menu.Item key="test" className="margin-0">
             Prototipi
-          </Menu.Item>
+          </Menu.Item> */}
         </Menu>
 
         {/* Sottotitolo descrittivo della sezione */}
@@ -129,6 +129,7 @@ const ProjectsSection = () => {
                   description={project.description}
                   tech={project.tech}
                   imgPath={project.imgPath}
+                  placeholderPath={project.placeholderPath}
                   repoLink={project.repoLink}
                   demoLink={project.demoLink}
                   videoLink={project.videoLink}

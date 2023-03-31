@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from "react";
 import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
 import { Tooltip } from "antd";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const ProjectCard = ({
   id,
@@ -9,6 +11,7 @@ const ProjectCard = ({
   description,
   tech,
   imgPath,
+  placeholderPath,
   repoLink,
   demoLink,
   videoLink,
@@ -30,6 +33,7 @@ const ProjectCard = ({
   return (
     <motion.div
       layout
+      key={id}
       ref={tiltRef}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -48,7 +52,7 @@ const ProjectCard = ({
         <article className="flex items-center gap-3">
           {videoLink ? (
             <Tooltip title="Video Demo" placement="top">
-              <a className="project-link" href="">
+              <a className="project-link" href={videoLink}>
                 <i className="fa-solid fa-play"></i>
               </a>
             </Tooltip>
@@ -57,7 +61,7 @@ const ProjectCard = ({
           )}
           {demoLink ? (
             <Tooltip title="Live Demo" placement="top">
-              <a className="project-link" href="">
+              <a className="project-link" href={demoLink}>
                 <i className="fa-solid fa-up-right-from-square up-transition"></i>
               </a>
             </Tooltip>
@@ -66,7 +70,7 @@ const ProjectCard = ({
           )}
           {repoLink ? (
             <Tooltip title="Repo. Codice" placement="top">
-              <a className="project-link" href="">
+              <a className="project-link" href={repoLink}>
                 <i className="fa-brands fa-github up-transition"></i>
               </a>
             </Tooltip>
@@ -76,8 +80,14 @@ const ProjectCard = ({
         </article>
       </div>
 
-      {/* backgound */}
-      <img className="project-img" src={imgPath} alt="" />
+      {/* ----------backgound--------- */}
+      <LazyLoadImage
+        className="project-img"
+        src={imgPath}
+        alt={title}
+        placeholderSrc={placeholderPath}
+        effect="opacity"
+      />
 
       {/* hidden content (I dettagli del progetto) */}
       <div className="hidden-content flex justify-center flex-col px-5 py-3">
