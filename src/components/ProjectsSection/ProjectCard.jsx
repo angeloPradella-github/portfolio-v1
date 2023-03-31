@@ -91,10 +91,12 @@ const ProjectCard = ({
 
       {/* hidden content (I dettagli del progetto) */}
       <div className="hidden-content flex justify-center flex-col px-5 py-3">
-        <h3 className="clr-light-fix text-2xl lg:text-4xl drop-shadow-md">
+        <h3 className="clr-light-fix text-2xl lg:text-4xl drop-shadow-md ">
           {title}
         </h3>
-        <p className="clr-light-fix text-base lg:text-xl ">{description}</p>
+        <p className="clr-light-fix text-base lg:text-lg lg:lg:leading-[20px]">
+          {description}
+        </p>
         <div className="flex flex-wrap gap-3 tech-container">
           {tech.map((techItem, i) => (
             <span
