@@ -3,6 +3,7 @@ import { Menu } from "antd";
 import { lazy, Suspense } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { projects } from "./projectsData";
+import LoadingFallback from "../FallbackSpinners/LoadingFallback";
 
 const ProjectCard = lazy(() => import("./ProjectCard"));
 
@@ -120,7 +121,7 @@ const ProjectsSection = () => {
           className="flex flex-wrap gap-3 justify-between"
         >
           <AnimatePresence>
-            <Suspense fallback={<div>Caricamento...</div>}>
+            <Suspense fallback={<LoadingFallback />}>
               {displayedProjects.map((project) => (
                 <ProjectCard
                   key={project.id}
