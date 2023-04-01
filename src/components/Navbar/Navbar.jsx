@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { useMediaQuery } from "react-responsive";
 import { Tooltip } from "antd";
-// import NavList from "./NavList.jsx";
+import NavList from "./NavList";
 import "../CustomButtons.css";
 
 const HamburgerMenu = ({ onClick }) => (
@@ -75,7 +75,7 @@ export default function Navbar() {
       </div>
 
       {/* ---------Navlist------------ */}
-      {/* <NavList menuOpen={menuOpen} /> */}
+      <NavList menuOpen={menuOpen} />
     </nav>
   );
 }
