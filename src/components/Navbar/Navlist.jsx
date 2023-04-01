@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function NavList({ menuOpen }) {
+const NavList = ({ menuOpen }) => {
   return (
     <div
       id="navList"
@@ -42,4 +42,5 @@ export default function NavList({ menuOpen }) {
       </a>
     </div>
   );
-}
+};
+export default NavList;
