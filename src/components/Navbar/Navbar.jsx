@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { useMediaQuery } from "react-responsive";
 import { Tooltip } from "antd";
-import NavLista from "./NavList";
+import NavLista from "./NavLista";
 import "../CustomButtons.css";
 
 const HamburgerMenu = ({ onClick }) => (
