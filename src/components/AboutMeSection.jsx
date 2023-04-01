@@ -2,8 +2,8 @@ import Intersecting from "./Intersecting";
 import { Tooltip } from "antd";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
-import ProfilePic from "../assets/images/Img_square1.jpg";
-import BlurredProfilePic from "../assets/images/Img_square1-compressed.jpg";
+import ProfilePic from "@app/assets/images/Img_square1.jpg";
+import BlurredProfilePic from "@app/assets/images/Img_square1-compressed.jpg";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 export default function AboutMeSection() {

@@ -3,6 +3,7 @@ import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
 import { Tooltip } from "antd";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 const ProjectCard = ({
@@ -79,7 +80,6 @@ const ProjectCard = ({
           )}
         </article>
       </div>
-
       {/* ----------backgound--------- */}
       <LazyLoadImage
         className="project-img"
@@ -88,13 +88,12 @@ const ProjectCard = ({
         placeholderSrc={placeholderPath}
         effect="opacity"
       />
-
       {/* hidden content (I dettagli del progetto) */}
       <div className="hidden-content flex justify-center flex-col px-5 py-3">
-        <h3 className="clr-light-fix text-2xl lg:text-4xl drop-shadow-md ">
+        <h3 className="clr-light-fix font-bold text-2xl lg:text-4xl drop-shadow">
           {title}
         </h3>
-        <p className="clr-light-fix text-base lg:text-lg lg:lg:leading-[20px]">
+        <p className="clr-light-fix leading-[20px] sm:text-base lg:text-lg drop-shadow-md">
           {description}
         </p>
         <div className="flex flex-wrap gap-3 tech-container">
