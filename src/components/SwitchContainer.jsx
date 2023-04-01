@@ -2,13 +2,13 @@ import { useState, useEffect } from "react";
 import { Tooltip } from "antd";
 
 const themeStyles = {
-  normal: {
+  dark: {
     "--clr-neutral": "#cdcdcd",
     "--clr-neutral-opaque": "#cdcdcd5b",
     "--clr-light": "#292929",
     "--clr-dark": "#e6e6e6",
   },
-  dark: {
+  normal: {
     "--clr-neutral": "#444452",
     "--clr-neutral-opaque": "#4444523d",
     "--clr-light": "#fffbfb",
@@ -47,7 +47,7 @@ export default function SwitchContainer() {
           onChange={handleToggle}
           type="checkbox"
           id="switch"
-          checked={currentTheme !== "dark"} //Per far partire lo switch nella modaltà corrente
+          checked={currentTheme !== "normal"} //Per far partire lo switch nella modaltà corrente
         />
         <label htmlFor="switch">Toggle</label>
       </Tooltip>
