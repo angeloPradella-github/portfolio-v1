@@ -1,6 +1,6 @@
 import React from "react";
 
-const NavList = ({ menuOpen }) => {
+const NavLista = ({ menuOpen }) => {
   return (
     <div
       id="navList"
@@ -43,4 +43,4 @@ const NavList = ({ menuOpen }) => {
     </div>
   );
 };
-export default NavList;
+export default NavLista;
