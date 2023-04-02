@@ -36,15 +36,15 @@ export default function HeroSection() {
         <motion.h1 className="fw-h-bold" variants={item}>
           Angelo G. Pradella
         </motion.h1>
-        <motion.p
-          className="max-w-lg text-justify md:text-left fs-med"
+        <motion.h2
+          className="max-w-lg text-justify clr-neutral md:text-left fs-med"
           variants={item}
         >
           Perito informatico con competenze
           <span className="clr-accent"> FullStack</span> di sviluppo Web,
           appassionato per la progettazione di interfacce ed esperienze digitali
           uniche.
-        </motion.p>
+        </motion.h2>
       </motion.div>
 
       <motion.div
