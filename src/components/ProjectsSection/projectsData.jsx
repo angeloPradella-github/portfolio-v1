@@ -206,4 +206,27 @@ export const projects = [
     demoLink: "",
     videoLink: "",
   },
+  {
+    id: 9,
+    title: "Smart Notes",
+    description: (
+      <>
+        <time dateTime="2023-04-17" className="clr-accent">
+          04/23
+        </time>{" "}
+        • Sito di NoteTaking che supporta testi con Markdown e categorie
+        personalizzabili con ricerca Fulltext
+      </>
+    ),
+    importance: 3,
+    category: "test",
+    tech: ["React", "Vite", "TypeScript", "ReactRouter", "ReactSelect"],
+    imgPath:
+      "https://res.cloudinary.com/dfrmafxjh/image/upload/v1681752952/portfolio-v1/project-imgs/smart-notes_1_tcotqo.webp",
+    placeholderPath:
+      "https://res.cloudinary.com/dfrmafxjh/image/upload/v1681753063/portfolio-v1/project-imgs/smart-notes-compressed_xbv4um.webp",
+    demoLink: "https://angelopradella-github.github.io/smart-notes-v1/",
+    videoLink: "",
+    repoLink: "https://github.com/angeloPradella-github/smart-notes-v1",
+  },
 ];
