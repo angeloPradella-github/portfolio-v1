@@ -44,14 +44,14 @@ const ProjectsSection = () => {
         framework e librerie come Bootstrap, Tailwind, React, Antd e altri.
       </>
     ),
-    // test: (
-    //   <>
-    //     La categoria dei prototipi include progetti sperimentali che esplorano{" "}
-    //     <span className="clr-accent">nuove tecnologie</span> e concetti di
-    //     design. Gli esperimenti riguardano l'uso di API, CMS, l'implementazione
-    //     di interfacce utente innovative ecc.
-    //   </>
-    // ),
+    test: (
+      <>
+        La categoria dei prototipi include progetti sperimentali che esplorano{" "}
+        <span className="clr-accent">nuove tecnologie</span> e concetti di
+        design. Gli esperimenti riguardano l'uso di API, CMS, l'implementazione
+        di interfacce utente innovative ecc.
+      </>
+    ),
   };
 
   const handleClick = useCallback((e) => {
@@ -102,9 +102,9 @@ const ProjectsSection = () => {
           <Menu.Item key="all">Tutti</Menu.Item>
           <Menu.Item key="webapp">Web App</Menu.Item>
           <Menu.Item key="frontend">Frontend</Menu.Item>
-          {/* <Menu.Item key="test" className="margin-0">
+          <Menu.Item key="test" className="margin-0">
             Prototipi
-          </Menu.Item> */}
+          </Menu.Item>
         </Menu>
 
         {/* Sottotitolo descrittivo della sezione */}
