@@ -9,9 +9,9 @@ export default function ContactSection() {
       </h2>
       <div className="container flex flex-col items-center md:px-4">
         <p className="text-justify md:text-center fw-b-thin">
-          Anche se attualmente non sono alla ricerca di nuove opportunità di
-          lavoro come sviluppatore, sarei comunque lieto di discutere qualsiasi
-          opportunità interessante nell'ambito dello sviluppo Web, specialmente{" "}
+          Anche se attualmente non sono alla ricerca di lavoro, sarei comunque
+          lieto di discutere qualsiasi opportunità interessante nell'ambito
+          dello sviluppo Web, specialmente{" "}
           <span className="clr-accent">Frontend</span>, inclusi progetti{" "}
           <span className="clr-accent">FullStack</span>.
         </p>
