@@ -33,6 +33,30 @@ export const projects = [
     videoLink: "https://www.youtube.com/watch?v=wJjnfwaC15Q",
   },
   {
+    id: 10,
+    title: "BrainBeats.ai",
+    description: (
+      <>
+        <time dateTime="2023-10-1" className="clr-accent">
+          02/23
+        </time>{" "}
+        • Piattaforma di giochi stile Quiz e Trivia con modalità e domande
+        supportate dall'intelligenza artificiale di OpenAi.{" "}
+      </>
+    ),
+    importance: 10,
+    category: "webapp",
+    tech: ["Angular", "JavaEE/Spring", "MySQL", "OpenAi API", "Chat GPT 3.5"],
+    imgPath:
+      "https://res.cloudinary.com/dfrmafxjh/image/upload/v1696259444/portfolio-v1/project-imgs/brainbeats_ldmzuw.webp",
+    placeholderPath:
+      "https://res.cloudinary.com/dfrmafxjh/image/upload/v1696259444/portfolio-v1/project-imgs/brainbeats_ldmzuw.webp",
+    repoLink:
+      "https://github.com/angeloPradella-github/frontend-would-you-rather",
+    demoLink: "https://frontend-would-you-rather-ac9jnlb9i.vercel.app/",
+    videoLink: "",
+  },
+  {
     id: 2,
     title: "Italian Tour",
     description: (
