@@ -53,7 +53,7 @@ export const projects = [
       "https://res.cloudinary.com/dfrmafxjh/image/upload/v1696259444/portfolio-v1/project-imgs/brainbeats_ldmzuw.webp",
     repoLink:
       "https://github.com/angeloPradella-github/frontend-would-you-rather",
-    demoLink: "https://frontend-would-you-rather-ac9jnlb9i.vercel.app/",
+    demoLink: "https://frontend-would-you-rather.vercel.app/",
     videoLink: "",
   },
   {
